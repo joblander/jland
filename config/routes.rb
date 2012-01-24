@@ -3,8 +3,11 @@ Joblander::Application.routes.draw do
   get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
   root :to => "users#new"
-  resources :users
+  resources :users do
+    resources :positions
+  end
   resources :sessions
+  resources :positions
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
