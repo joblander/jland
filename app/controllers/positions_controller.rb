@@ -1,10 +1,10 @@
 class PositionsController < ApplicationController
   def index
-    logger.info "headers: #{params['user_id']}.values"
-    if params['user_id'].empty?
-      User.new(params['user_id']).positions
+    logger.info "headers: #{params.inspect}"
+    if params['user_id']
+      @positions = User.find(params['user_id']).positions
     else
-      Position.all
+      @positions = Position.all
     end
 
     respond_to do |format|

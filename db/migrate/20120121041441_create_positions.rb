@@ -1,7 +1,7 @@
 class CreatePositions < ActiveRecord::Migration
   def change
     create_table :positions do |t|
-      t.references :user
+      t.references :user, :null => false
       t.references :lead_search
       t.string :source
       t.string :name
