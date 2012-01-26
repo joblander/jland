@@ -23,7 +23,8 @@ class PositionsController < ApplicationController
   end
 
   def create
-    @position = Position.new(params[:position])
+    user = User.find(params['user_id'])
+    @position = user.positions.create(params[:position])
 
     respond_to do |format|
       if @position.save
