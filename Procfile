@@ -1,1 +1,1 @@
-joblander: bundle exec script/rails server -e production
+web: bundle exec rails server thin -p $PORT
