@@ -41,3 +41,7 @@ group :test do
   gem "guard-rspec"
 end
 
+group :development do
+  gem 'annotate', '~> 2.4.1.beta'
+end
+
