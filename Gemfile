@@ -30,12 +30,14 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+gem "rspec-rails", :group => [:test, :development]
+
 group :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
   gem 'rspec-rails'
+  gem "factory_girl_rails"
+  gem "capybara"
+  gem "guard-rspec"
 end
 
-group :development do
-  gem 'rspec-rails'
-end
