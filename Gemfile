@@ -39,9 +39,11 @@ group :test do
   gem "factory_girl_rails"
   gem "capybara"
   gem "guard-rspec"
+  gem 'simplecov', :require => false
 end
 
 group :development do
+  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
   gem 'annotate', '~> 2.4.1.beta'
 end
 
