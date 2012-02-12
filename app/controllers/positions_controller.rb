@@ -1,24 +1,9 @@
 class PositionsController < ApplicationController
   def index
-    logger.info "headers: #{params.inspect}"
-    if params['user_id']
-      @positions = User.find(params['user_id']).positions
-    else
-      @positions = Position.all
-    end
-
+    @positions = User.find(params['user_id']).positions
     respond_to do |format|
       format.html  # index.html.erb
       format.json  { render :json => @positions }
-    end
-  end
-
-  def new
-    @position = Position.new
-
-    respond_to do |format|
-      format.html  # new.html.erb
-      format.json  { render :json => @position }
     end
   end
 
@@ -41,7 +26,6 @@ class PositionsController < ApplicationController
   end
 
   def show
-    logger.info"params: params.inspect"
     @position = Position.find(params[:id])
 
     respond_to do |format|
@@ -58,10 +42,6 @@ class PositionsController < ApplicationController
       format.html { redirect_to positions_url }
       format.json { head :no_content }
     end
-  end
-
-  def edit
-    @position = Position.find(params[:id])
   end
 
   def update
