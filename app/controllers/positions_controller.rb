@@ -16,7 +16,7 @@ class PositionsController < ApplicationController
         format.html  { redirect_to(@position,
                       :notice => 'Position was successfully created.') }
         format.json  { render :json => @position,
-                      :status => :created, :location => @position }
+                      :status => :created, :location => user_position_url(user, @position) }
       else
         format.html  { render :action => "new" }
         format.json  { render :json => @position.errors,

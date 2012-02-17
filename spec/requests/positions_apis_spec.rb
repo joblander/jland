@@ -42,4 +42,17 @@ describe "PositionsApis" do
       response.status.should be(200)
     end
   end
+
+  describe "POST /users/:user_id/positions.json" do
+    # TODO test that we get the minimal set of required fields
+    it "creates a position" do
+      user = Factory(:user)
+      post "/users/#{user.id}/positions.json", :position => {:name => 'position_name'}
+
+      res = ActiveSupport::JSON.decode(response.body)
+      res['name'].should == 'position_name'
+      res['user_id'].should == user.id
+      response.status.should be(201)
+    end
+  end
 end
