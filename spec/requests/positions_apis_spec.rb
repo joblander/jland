@@ -19,7 +19,7 @@ describe "PositionsApis" do
       res.first['source'].should == position.source
       res.first['user_id'].should == position.user.id
       res.size.should == 1
-      response.status.should be(200)
+      response.status.should == 200
     end
 
     it "gets all positions for a user when there are two positions" do
@@ -35,7 +35,7 @@ describe "PositionsApis" do
       res[1]['source'].should == @position2.source
       res[1]['user_id'].should == @position2.user.id
       res.size.should == 2
-      response.status.should be(200)
+      response.status.should == 200
     end
 
     it "gets no positions for a user when there are no positions" do
@@ -44,7 +44,14 @@ describe "PositionsApis" do
 
       res = ActiveSupport::JSON.decode(response.body).sort{|a,b| a.to_s <=> b.to_s}
       res.should be_empty
-      response.status.should be(200)
+      response.status.should == 200
+    end
+
+    it "gets no positions for a user when the user doesn't exist" do
+      get "/users/88888/positions.json"
+
+      res = ActiveSupport::JSON.decode(response.body)
+      response.status.should == 404
     end
   end
 
@@ -56,7 +63,14 @@ describe "PositionsApis" do
       res = ActiveSupport::JSON.decode(response.body)
       res['name'].should == 'position_name'
       res['user_id'].should == @user.id
-      response.status.should be(201)
+      response.status.should == 201
+    end
+
+    it "does not create a position when the user doesn't exist" do
+      post "/users/88888/positions.json", :position => {:name => 'position_name'}
+
+      res = ActiveSupport::JSON.decode(response.body)
+      response.status.should == 404
     end
   end
 
@@ -67,14 +81,14 @@ describe "PositionsApis" do
       res = ActiveSupport::JSON.decode(response.body)
       res['name'].should == 'pname1'
       res['user_id'].should == @user.id
-      response.status.should be(200)
+      response.status.should == 200
     end
 
     it "doesn't get a position for a non-existing position" do
       Position.exists?(888888).should be_false
       get "/users/#{@user.id}/positions/888888.json"
 
-      response.status.should be(404)
+      response.status.should == 404
     end
   end
 
@@ -85,9 +99,22 @@ describe "PositionsApis" do
       Position.exists?(@position1.id).should be_false
 
       response.body.should be_empty
-      response.status.should be(204)
+      response.status.should == 204
+    end
 
-      @position1
+    it "should not care if instructed to delete a position for a non-existing position" do
+      id = 88888
+      Position.exists?(id).should be_false
+      delete "/users/#{@user.id}/positions/#{id}.json"
+      response.status.should == 204
+    end
+
+    it "should not care if instructed to delete a position for a non-existing user" do
+      id = 88888
+      Position.exists?(id).should be_false
+      User.exists?(id).should be_false
+      delete "/users/id/positions/#{id}.json"
+      response.status.should == 204
     end
   end
 end

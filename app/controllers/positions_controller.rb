@@ -44,6 +44,7 @@ class PositionsController < ApplicationController
   end
 
   def record_not_found
-      respond_with({}, :status => :not_found)
+    #render :json => {}, :status => :not_found
+    respond_with({}, :status => :not_found, :location => nil)
   end
 end
