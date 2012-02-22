@@ -17,7 +17,7 @@ class PositionsController < ApplicationController
   end
 
   def show
-    respond_with position
+    respond_with user.positions.find(params[:id])
   end
 
   def destroy
@@ -44,7 +44,6 @@ class PositionsController < ApplicationController
   end
 
   def record_not_found
-    #render :json => {}, :status => :not_found
     respond_with({}, :status => :not_found, :location => nil)
   end
 end

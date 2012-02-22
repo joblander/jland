@@ -5,8 +5,10 @@ describe "PositionsApis" do
 
   before do
     @user = Factory(:user)
+    @user3 = Factory(:user)
     @position1 = Factory(:position, :name => 'pname1', :source => 'http://bla1', :user => @user)
     @position2 = Factory(:position, :name => 'pname2', :source => 'http://bla2', :user => @user)
+    @position3 = Factory(:position, :name => 'pname3', :source => 'http://bla2', :user => @user3)
   end
 
   describe "GET /users/:user_id/positions.json" do
@@ -93,6 +95,13 @@ describe "PositionsApis" do
     it "doesn't get a position for a non-existing position" do
       Position.exists?(888888).should be_false
       get "/users/#{@user.id}/positions/888888.json"
+
+      response.status.should == 404
+    end
+
+    it "doesn't get a position for a position belonging to a different user" do
+      Position.exists?(@position3).should be_true
+      get "/users/#{@position3.id}/positions/#{@position3.id}.json"
 
       response.status.should == 404
     end
