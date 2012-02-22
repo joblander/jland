@@ -74,7 +74,6 @@ describe "PositionsApis" do
       Position.exists?(888888).should be_false
       get "/users/#{@user.id}/positions/888888.json"
 
-      res = ActiveSupport::JSON.decode(response.body)
       response.status.should be(404)
     end
   end
