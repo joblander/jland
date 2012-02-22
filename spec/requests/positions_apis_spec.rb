@@ -61,13 +61,34 @@ describe "PositionsApis" do
   end
 
   describe "GET /users/:user_id/positions/:position_id.json" do
-    it "creates a position" do
+    it "gets a position for a user" do
       get "/users/#{@user.id}/positions/#{@position1.id}.json"
 
       res = ActiveSupport::JSON.decode(response.body)
       res['name'].should == 'pname1'
       res['user_id'].should == @user.id
       response.status.should be(200)
+    end
+
+    it "doesn't get a position for a non-existing position" do
+      Position.exists?(888888).should be_false
+      get "/users/#{@user.id}/positions/888888.json"
+
+      res = ActiveSupport::JSON.decode(response.body)
+      response.status.should be(404)
+    end
+  end
+
+  describe "DELETE /users/:user_id/positions/:position_id.json" do
+    it "deletes a position" do
+      Position.exists?(@position1.id).should be_true
+      delete "/users/#{@user.id}/positions/#{@position1.id}.json"
+      Position.exists?(@position1.id).should be_false
+
+      response.body.should be_empty
+      response.status.should be(204)
+
+      @position1
     end
   end
 end

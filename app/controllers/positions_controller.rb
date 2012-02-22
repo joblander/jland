@@ -1,4 +1,7 @@
 class PositionsController < ApplicationController
+  rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
+  respond_to :json
+
   def index
     @positions = User.find(params['user_id']).positions
     respond_to do |format|
@@ -58,5 +61,11 @@ class PositionsController < ApplicationController
                       :status => :unprocessable_entity }
       end
     end
+  end
+
+  private
+
+  def record_not_found
+      respond_with({}, :status => :not_found)
   end
 end
