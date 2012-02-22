@@ -12,7 +12,7 @@ class PositionsController < ApplicationController
     if @position.save
       respond_with @position, :status => :created, :location => user_position_url(user, @position)
     else
-      respond_with @position.errors, :status => :unprocessable_entity
+      respond_with @position, :status => :unprocessable_entity
     end
   end
 

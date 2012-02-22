@@ -66,10 +66,16 @@ describe "PositionsApis" do
       response.status.should == 201
     end
 
+    it "does not create a position when a name is not specified" do
+      post "/users/#{@user.id}/positions.json"
+
+      res = ActiveSupport::JSON.decode(response.body)
+      response.status.should == 422
+    end
+
     it "does not create a position when the user doesn't exist" do
       post "/users/88888/positions.json", :position => {:name => 'position_name'}
 
-      res = ActiveSupport::JSON.decode(response.body)
       response.status.should == 404
     end
   end
