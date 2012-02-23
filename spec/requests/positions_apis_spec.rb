@@ -132,4 +132,28 @@ describe "PositionsApis" do
       response.status.should == 204
     end
   end
+
+  describe "PUT /users/:user_id/positions/:position_id.json" do
+    it "udpates a position when given :position => {:name => 'new_name'}" do
+      put "/users/#{@user.id}/positions/#{@position1.id}.json", :position => {:name => 'new_name'}
+
+      'new_name' != @position1.name
+      @position1.reload
+      @position1.name.should == 'new_name'
+      response.status.should == 204
+    end
+
+    it "does not update a position when given :position => {:wrong_field => 'new_name'}" do
+      put "/users/#{@user.id}/positions/#{@position1.id}.json", :position => {:wrong_field => 'new_name'}
+      puts response.body
+      puts response.status
+      old_name = @position1.name
+      @position1.reload
+      @position1.name.should == old_name
+      response.status.should == 422
+      puts response.body
+      #res = ActiveSupport::JSON.decode(response.body)
+      #res.should match('unkown attribute')
+    end
+  end
 end

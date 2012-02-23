@@ -14,6 +14,7 @@ class PositionsController < ApplicationController
     else
       respond_with @position, :status => :unprocessable_entity
     end
+
   end
 
   def show
@@ -26,11 +27,13 @@ class PositionsController < ApplicationController
   end
 
   def update
-      if position.update_attributes(params[:position])
-        respond_with({}, :status => :ok)
-      else
-        respond_with position.errors, :status => :unprocessable_entity
-      end
+    begin
+      position.update_attributes(params[:position])
+      respond_with(position, :status => :ok)
+    rescue ActiveRecord::UnknownAttributeError => e
+      render(:json => e.message, :status => :unprocessable_entity)
+      #respond_with @position, e.message, :status => :unprocessable_entity
+    end
   end
 
   private
