@@ -8,17 +8,12 @@ class PositionsController < ApplicationController
 
   def create
     @position = user.positions.create(params[:position])
-
-    if @position.save
-      respond_with @position, :status => :created, :location => user_position_url(user, @position)
-    else
-      respond_with @position, :status => :unprocessable_entity
-    end
-
+    @position.save
+    respond_with user, @position
   end
 
   def show
-    respond_with user.positions.find(params[:id])
+    respond_with user, user.positions.find(params[:id])
   end
 
   def destroy
@@ -29,7 +24,7 @@ class PositionsController < ApplicationController
   def update
     begin
       position.update_attributes(params[:position])
-      respond_with(position, :status => :ok)
+      respond_with(user, position, :status => :ok)
     rescue ActiveRecord::UnknownAttributeError => e
       render(:json => e.message, :status => :unprocessable_entity)
       #respond_with @position, e.message, :status => :unprocessable_entity
