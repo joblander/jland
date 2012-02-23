@@ -134,7 +134,7 @@ describe "PositionsApis" do
   end
 
   describe "PUT /users/:user_id/positions/:position_id.json" do
-    it "udpates a position when given :position => {:name => 'new_name'}" do
+    it "updates a position when given :position => {:name => 'new_name'}" do
       put "/users/#{@user.id}/positions/#{@position1.id}.json", :position => {:name => 'new_name'}
 
       'pname1'.should == @position1.name
@@ -143,7 +143,7 @@ describe "PositionsApis" do
       response.status.should == 204
     end
 
-    it "udpates a position's status when given ':position => {:status => 'applied'}'" do
+    it "updates a position's status when given ':position => {:status => 'applied'}'" do
       put "/users/#{@user.id}/positions/#{@position1.id}.json", :position => {:pstatus => 'applied'}
 
       'to_apply'.should == @position1.pstatus
