@@ -1,4 +1,4 @@
-curl  -H"Content-Type:application/json" -d "{\"name\":\"position\",\"details\":\"position description\"}" http://localhost:3000/users/1/positions.json #create a position for a user
-curl http://localhost:3000/users/1/positions.json # get all positions for a user
-curl http://localhost:3000/users/1/positions/2.json # get a position for a user
-curl -XPUT -H"Content-Type:application/json" http://localhost:3000/users/1/positions/2.json -d "{\"name\":\"position\",\"details\":\"position description\"}"
+curl -i -H"Content-Type:application/json" -d "{\"name\":\"position\",\"details\":\"position description\"}" http://localhost:3000/users/1/positions.json #create a position for a user
+curl -i http://localhost:3000/users/1/positions.json # get all positions for a user
+curl -i http://localhost:3000/users/1/positions/2.json # get a position for a user
+curl -i -XPUT -H"Content-Type:application/json" http://localhost:3000/users/1/positions/2.json -d "{\"name\":\"position\",\"details\":\"position description\"}"
