@@ -2,3 +2,4 @@ curl -i -H"Content-Type:application/json" -d "{\"name\":\"position\",\"details\"
 curl -i http://localhost:3000/users/1/positions.json # get all positions for a user
 curl -i http://localhost:3000/users/1/positions/2.json # get a position for a user
 curl -i -XPUT -H"Content-Type:application/json" http://localhost:3000/users/1/positions/2.json -d "{\"name\":\"position\",\"details\":\"position description\"}"
+curl -i -XPUT -H"Content-Type:application/json" http://localhost:3000/users/1/positions/2.json -d "{\"status\":\"applied\"}"

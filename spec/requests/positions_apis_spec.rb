@@ -4,11 +4,11 @@ require 'json'
 describe "PositionsApis" do
 
   before do
-    @user = Factory(:user)
-    @user3 = Factory(:user)
-    @position1 = Factory(:position, :name => 'pname1', :source => 'http://bla1', :user => @user)
-    @position2 = Factory(:position, :name => 'pname2', :source => 'http://bla2', :user => @user)
-    @position3 = Factory(:position, :name => 'pname3', :source => 'http://bla2', :user => @user3)
+    @user = FactoryGirl.create(:user)
+    @user3 = FactoryGirl.create(:user)
+    @position1 = FactoryGirl.create(:position, :name => 'pname1', :source => 'http://bla1', :user => @user)
+    @position2 = FactoryGirl.create(:position, :name => 'pname2', :source => 'http://bla2', :user => @user)
+    @position3 = FactoryGirl.create(:position, :name => 'pname3', :source => 'http://bla2', :user => @user3)
   end
 
   describe "GET /users/:user_id/positions.json" do
@@ -137,21 +137,28 @@ describe "PositionsApis" do
     it "udpates a position when given :position => {:name => 'new_name'}" do
       put "/users/#{@user.id}/positions/#{@position1.id}.json", :position => {:name => 'new_name'}
 
-      'new_name' != @position1.name
+      'pname1'.should == @position1.name
       @position1.reload
       @position1.name.should == 'new_name'
       response.status.should == 204
     end
 
-    it "does not update a position when given :position => {:wrong_field => 'new_name'}" do
+    it "udpates a position's status when given ':position => {:status => 'applied'}'" do
+      put "/users/#{@user.id}/positions/#{@position1.id}.json", :position => {:pstatus => 'applied'}
+
+      'to_apply'.should == @position1.pstatus
+      @position1.reload
+      @position1.pstatus.should == 'applied'
+      response.status.should == 204
+    end
+
+    it "does not update a position when given a wrong field ':position => {:wrong_field => 'new_name'}'" do
       put "/users/#{@user.id}/positions/#{@position1.id}.json", :position => {:wrong_field => 'new_name'}
-      puts response.body
-      puts response.status
       old_name = @position1.name
       @position1.reload
       @position1.name.should == old_name
       response.status.should == 422
-      puts response.body
+      #fails to parse.
       #res = ActiveSupport::JSON.decode(response.body)
       #res.should match('unkown attribute')
     end

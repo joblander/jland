@@ -1,11 +1,13 @@
-Factory.define :user do |f|
-  f.sequence(:email) { |n| "foo#{n}@example.com" }
-  f.password "something"
-  f.password_digest "something"
-end
+FactoryGirl.define do
+  factory :user do
+    sequence(:email) { |n| "foo#{n}@example.com" }
+    password "something"
+    password_digest "something"
+  end
 
-Factory.define :position do |f|
-  f.name "position_name"
-  f.association :user, :factory => :user
+  factory :position do
+    name "position_name"
+    pstatus "to_apply"
+    association :user, :factory => :user
+  end
 end
-
