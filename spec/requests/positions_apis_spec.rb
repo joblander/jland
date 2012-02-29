@@ -151,16 +151,5 @@ describe "PositionsApis" do
       @position1.pstatus.should == 'applied'
       response.status.should == 204
     end
-
-    it "does not update a position when given a wrong field ':position => {:wrong_field => 'new_name'}'" do
-      put "/users/#{@user.id}/positions/#{@position1.id}.json", :position => {:wrong_field => 'new_name'}
-      old_name = @position1.name
-      @position1.reload
-      @position1.name.should == old_name
-      response.status.should == 422
-      #fails to parse.
-      #res = ActiveSupport::JSON.decode(response.body)
-      #res.should match('unkown attribute')
-    end
   end
 end

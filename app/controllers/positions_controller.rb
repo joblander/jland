@@ -22,13 +22,8 @@ class PositionsController < ApplicationController
   end
 
   def update
-    begin
-      position.update_attributes(params[:position])
-      respond_with(user, position, :status => :ok)
-    rescue ActiveRecord::UnknownAttributeError => e
-      render(:json => e.message, :status => :unprocessable_entity)
-      #respond_with @position, e.message, :status => :unprocessable_entity
-    end
+    position.update_attributes(params[:position])
+    respond_with(user, position, :status => :ok)
   end
 
   private
