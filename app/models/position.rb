@@ -13,13 +13,17 @@
 #
 
 class Position < ActiveRecord::Base
+
+  PSTATES = [:to_review, :to_apply, :applied, :to_scedule, :interviewed]
+
   belongs_to :user
   belongs_to :lead_search
 
-  validates :name, :pstatus, :presence => true
+  validates :pstatus, :presence => true, :inclusion => { :in => PSTATES.map(&:to_s), :message => "%{value} is not a valid position status" }
+  validates :name, :presence => true
 
   def to_s
-    "I'm a position"
+    "name: #{name}, status: #{pstatus}"
   end
 
   # we'll represent state as a state machine
