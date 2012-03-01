@@ -7,6 +7,7 @@ class PositionsController < ApplicationController
   end
 
   def create
+    # we're using @position in case we would want to use it in the view in the future.
     @position = user.positions.create(params[:position])
     @position.save
     respond_with user, @position

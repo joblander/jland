@@ -40,6 +40,8 @@ group :test do
   gem "capybara"
   gem "guard-rspec"
   gem 'simplecov', :require => false
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
 end
 
 group :development do
