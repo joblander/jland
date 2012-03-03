@@ -202,6 +202,7 @@ DEPENDENCIES
   factory_girl_rails
   guard-rspec
   jquery-rails
+  libv8 (= 3.3.10.4)
   pg
   rails (= 3.2.2)
   rb-fsevent
