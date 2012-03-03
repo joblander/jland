@@ -45,8 +45,11 @@ group :test do
 end
 
 group :development do
-  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
   gem 'annotate', '~> 2.4.1.beta'
   gem 'awesome_print'
+end
+
+group :test, :darwin do
+  gem 'rb-fsevent'
 end
 
