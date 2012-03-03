@@ -177,9 +177,9 @@ GEM
       polyglot (>= 0.3.1)
     turn (0.8.3)
       ansi
-    twitter-bootstrap-rails (2.0.3)
+    twitter-bootstrap-rails (2.0.1)
       actionpack (>= 3.1)
-      less-rails (~> 2.1.6)
+      less-rails (~> 2.1.5)
       railties (>= 3.1)
     tzinfo (0.3.31)
     uglifier (1.2.3)
@@ -202,7 +202,6 @@ DEPENDENCIES
   factory_girl_rails
   guard-rspec
   jquery-rails
-  libv8 (= 3.3.10.4)
   pg
   rails (= 3.2.2)
   rb-fsevent
@@ -211,5 +210,5 @@ DEPENDENCIES
   simplecov
   thin
   turn (~> 0.8.3)
-  twitter-bootstrap-rails
+  twitter-bootstrap-rails (~> 2.0.1.0)
   uglifier (>= 1.0.3)
