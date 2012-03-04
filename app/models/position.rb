@@ -14,7 +14,7 @@
 
 class Position < ActiveRecord::Base
 
-  PSTATES = [:to_review, :to_apply, :applied, :to_schedule, :interviewed, :rejected]
+  PSTATES = [:to_review, :to_apply, :applied, :to_schedule, :interviewed, :rejected, :offered, :not_interested ]
 
   belongs_to :user
   belongs_to :lead_search
