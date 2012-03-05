@@ -2,8 +2,9 @@
 
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
+
+    <div class="alert alert-error">
+      <h3>Please correct the following problems:</h2>
       <ul>
         <% for message in @user.errors.full_messages %>
           <li><%= message %></li>
