@@ -14,12 +14,12 @@
 
 class Position < ActiveRecord::Base
 
-  PSTATES = [:to_review, :to_apply, :applied, :to_schedule, :interviewed, :rejected, :offered, :not_interested ]
+  PSTATES = ['to_review', 'to_apply', 'applied', 'to_schedule', 'interviewed', 'rejected', 'offered', 'not_interested' ].freeze
 
   belongs_to :user
   belongs_to :lead_search
 
-  validates :pstatus, :presence => true, :inclusion => { :in => PSTATES.map(&:to_s), :message => "%{value} is not a valid position status" }
+  validates :pstatus, :presence => true, :inclusion => { :in => PSTATES, :message => "%{value} is not a valid position status" }
   validates :name, :presence => true
 
   def to_s
