@@ -5,7 +5,7 @@ curl -i -XPUT -H"Content-Type:application/json" http://joblander.herokuapp.com/u
 curl -i -XPUT -H"Content-Type:application/json" http://joblander.herokuapp.com/users/1/positions/2.json -d "{\"pstatus\":\"applied\"}"
 
 # using httpie:
-http POST http://joblander.herokuapp.com/users/1/positions.json name=posi details="some details" # create a position
+http POST http://joblander.herokuapp.com/users/1/positions.json name=posi details="some details" details=det company=com comments=com app_link=link app_due_date=1/1/2012 # create a position
 http GET http://joblander.herokuapp.com/users/1/positions.json # get all positions for a user
 http GET http://joblander.herokuapp.com/users/1/positions/2.json # get a position for a user
 http PUT http://joblander.herokuapp.com/users/1/positions/2.json name=posi details="some details" # update a position

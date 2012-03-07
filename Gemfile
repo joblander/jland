@@ -48,6 +48,8 @@ end
 group :development do
   gem 'annotate', '~> 2.4.1.beta'
   gem 'awesome_print'
+  gem 'pry-rails'
+  gem 'pry-doc'
 end
 
 group :test, :darwin do
