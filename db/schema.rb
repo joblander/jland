@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120223041922) do
+ActiveRecord::Schema.define(:version => 20120307015243) do
 
   create_table "positions", :force => true do |t|
     t.integer  "user_id",                                :null => false
@@ -22,6 +22,10 @@ ActiveRecord::Schema.define(:version => 20120223041922) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "pstatus",        :default => "to_apply", :null => false
+    t.string   "company"
+    t.text     "comments"
+    t.text     "app_link"
+    t.datetime "app_due_date"
   end
 
   add_index "positions", ["lead_search_id"], :name => "index_positions_on_lead_search_id"

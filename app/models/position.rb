@@ -11,6 +11,10 @@
 #  created_at     :datetime        not null
 #  updated_at     :datetime        not null
 #  pstatus        :string(255)     default("to_apply"), not null
+#  company        :string(255)
+#  comments       :text
+#  app_link       :text
+#  app_due_date   :datetime
 #
 
 class Position < ActiveRecord::Base
