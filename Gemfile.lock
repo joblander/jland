@@ -175,7 +175,7 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    turn (0.8.3)
+    turn (0.9.3)
       ansi
     twitter-bootstrap-rails (2.0.3)
       actionpack (>= 3.1)
@@ -209,6 +209,6 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   simplecov
   thin
-  turn (~> 0.8.3)
+  turn
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
