@@ -29,13 +29,13 @@ describe "PositionsApis" do
       @position1.user.id.should == @position2.user.id
       get "/users/#{@user.id}/positions.json"
 
-      res = ActiveSupport::JSON.decode(response.body).sort{|a,b| a.to_s <=> b.to_s}
-      res[0]['name'].should == @position1.name
-      res[0]['source'].should == @position1.source
-      res[0]['user_id'].should == @position1.user.id
-      res[1]['name'].should == @position2.name
-      res[1]['source'].should == @position2.source
-      res[1]['user_id'].should == @position2.user.id
+      res = ActiveSupport::JSON.decode(response.body).sort{|a,b| b['created_at'] <=> a['created_at']}
+      res[1]['name'].should == @position1.name
+      res[1]['source'].should == @position1.source
+      res[1]['user_id'].should == @position1.user.id
+      res[0]['name'].should == @position2.name
+      res[0]['source'].should == @position2.source
+      res[0]['user_id'].should == @position2.user.id
       res.size.should == 2
       response.status.should == 200
     end

@@ -3,10 +3,10 @@ Joblander::Application.routes.draw do
   get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
   root :to => "users#new"
-  resources :users do
-    resources :positions
+  resources :users, :only => :create do
+    resources :positions, :except => [:new, :edit]
   end
-  resources :sessions
+  resources :sessions, :only => [:create, :destroy]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -66,29 +66,16 @@ Joblander::Application.routes.draw do
   # match ':controller(/:action(/:id(.:format)))'
 end
 #== Route Map
-# Generated on 06 Mar 2012 20:15
+# Generated on 07 Mar 2012 21:44
 #
-#              login GET    /login(.:format)                             sessions#new
-#             signup GET    /signup(.:format)                            users#new
-#               root        /                                            users#new
-#     user_positions GET    /users/:user_id/positions(.:format)          positions#index
-#                    POST   /users/:user_id/positions(.:format)          positions#create
-#  new_user_position GET    /users/:user_id/positions/new(.:format)      positions#new
-# edit_user_position GET    /users/:user_id/positions/:id/edit(.:format) positions#edit
-#      user_position GET    /users/:user_id/positions/:id(.:format)      positions#show
-#                    PUT    /users/:user_id/positions/:id(.:format)      positions#update
-#                    DELETE /users/:user_id/positions/:id(.:format)      positions#destroy
-#              users GET    /users(.:format)                             users#index
-#                    POST   /users(.:format)                             users#create
-#           new_user GET    /users/new(.:format)                         users#new
-#          edit_user GET    /users/:id/edit(.:format)                    users#edit
-#               user GET    /users/:id(.:format)                         users#show
-#                    PUT    /users/:id(.:format)                         users#update
-#                    DELETE /users/:id(.:format)                         users#destroy
-#           sessions GET    /sessions(.:format)                          sessions#index
-#                    POST   /sessions(.:format)                          sessions#create
-#        new_session GET    /sessions/new(.:format)                      sessions#new
-#       edit_session GET    /sessions/:id/edit(.:format)                 sessions#edit
-#            session GET    /sessions/:id(.:format)                      sessions#show
-#                    PUT    /sessions/:id(.:format)                      sessions#update
-#                    DELETE /sessions/:id(.:format)                      sessions#destroy
+#          login GET    /login(.:format)                        sessions#new
+#         signup GET    /signup(.:format)                       users#new
+#           root        /                                       users#new
+# user_positions GET    /users/:user_id/positions(.:format)     positions#index
+#                POST   /users/:user_id/positions(.:format)     positions#create
+#  user_position GET    /users/:user_id/positions/:id(.:format) positions#show
+#                PUT    /users/:user_id/positions/:id(.:format) positions#update
+#                DELETE /users/:user_id/positions/:id(.:format) positions#destroy
+#          users POST   /users(.:format)                        users#create
+#       sessions POST   /sessions(.:format)                     sessions#create
+#        session DELETE /sessions/:id(.:format)                 sessions#destroy
