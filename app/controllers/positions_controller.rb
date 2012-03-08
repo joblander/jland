@@ -3,18 +3,18 @@ class PositionsController < ApplicationController
   respond_to :json
 
   def index
-    respond_with user.positions
+    respond_with user.positions, :include => :related_emails
   end
 
   def create
     # we're using @position in case we would want to use it in the view in the future.
-    @position = user.positions.create(params[:position])
+    @position = user.positions.build(params[:position])
     @position.save
-    respond_with user, @position
+    respond_with user, @position, :include => :related_emails
   end
 
   def show
-    respond_with user, user.positions.find(params[:id])
+    respond_with user, user.positions.find(params[:id]), :include => :related_emails
   end
 
   def destroy

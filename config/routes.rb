@@ -4,7 +4,9 @@ Joblander::Application.routes.draw do
   get "signup" => "users#new", :as => "signup"
   root :to => "users#new"
   resources :users, :only => :create do
-    resources :positions, :except => [:new, :edit]
+    resources :positions, :except => [:new, :edit] do
+      resources :related_emails, :only => [:create, :destroy]
+    end
   end
   resources :sessions, :only => [:create, :destroy]
 
@@ -66,16 +68,18 @@ Joblander::Application.routes.draw do
   # match ':controller(/:action(/:id(.:format)))'
 end
 #== Route Map
-# Generated on 07 Mar 2012 21:44
+# Generated on 08 Mar 2012 00:16
 #
-#          login GET    /login(.:format)                        sessions#new
-#         signup GET    /signup(.:format)                       users#new
-#           root        /                                       users#new
-# user_positions GET    /users/:user_id/positions(.:format)     positions#index
-#                POST   /users/:user_id/positions(.:format)     positions#create
-#  user_position GET    /users/:user_id/positions/:id(.:format) positions#show
-#                PUT    /users/:user_id/positions/:id(.:format) positions#update
-#                DELETE /users/:user_id/positions/:id(.:format) positions#destroy
-#          users POST   /users(.:format)                        users#create
-#       sessions POST   /sessions(.:format)                     sessions#create
-#        session DELETE /sessions/:id(.:format)                 sessions#destroy
+#                        login GET    /login(.:format)                                                    sessions#new
+#                       signup GET    /signup(.:format)                                                   users#new
+#                         root        /                                                                   users#new
+# user_position_related_emails POST   /users/:user_id/positions/:position_id/related_emails(.:format)     related_emails#create
+#  user_position_related_email DELETE /users/:user_id/positions/:position_id/related_emails/:id(.:format) related_emails#destroy
+#               user_positions GET    /users/:user_id/positions(.:format)                                 positions#index
+#                              POST   /users/:user_id/positions(.:format)                                 positions#create
+#                user_position GET    /users/:user_id/positions/:id(.:format)                             positions#show
+#                              PUT    /users/:user_id/positions/:id(.:format)                             positions#update
+#                              DELETE /users/:user_id/positions/:id(.:format)                             positions#destroy
+#                        users POST   /users(.:format)                                                    users#create
+#                     sessions POST   /sessions(.:format)                                                 sessions#create
+#                      session DELETE /sessions/:id(.:format)                                             sessions#destroy

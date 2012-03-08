@@ -10,4 +10,9 @@ FactoryGirl.define do
     pstatus "to_apply"
     association :user, :factory => :user
   end
+
+  factory :related_email do
+    sequence(:guid) { |n| "aaa#{n}" }
+    association :position, :factory => :position
+  end
 end

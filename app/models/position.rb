@@ -23,6 +23,7 @@ class Position < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :lead_search
+  has_many :related_emails
 
   validates :pstatus, :presence => true, :inclusion => { :in => PSTATES, :message => "%{value} is not a valid position status" }
   validates :name, :presence => true

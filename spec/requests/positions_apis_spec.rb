@@ -105,6 +105,17 @@ describe "PositionsApis" do
 
       response.status.should == 404
     end
+
+    it "gets a position with a related email", :rel=>true do
+      related_email = FactoryGirl.create(:related_email, :guid => '11s')
+      get "/users/#{related_email.position.user.id}/positions/#{related_email.position.id}.json"
+
+      res = ActiveSupport::JSON.decode(response.body)
+      res['related_emails'].size.should == 1
+      res['related_emails'].first['guid'].should == '11s'
+
+      response.status.should == 200
+    end
   end
 
   describe "DELETE /users/:user_id/positions/:position_id.json" do
@@ -152,4 +163,31 @@ describe "PositionsApis" do
       response.status.should == 204
     end
   end
+
+  describe "POST /users/:user_id/positions/:position_id/related_emails" do
+    # TODO test that we get the minimal set of required fields
+    it "creates a related_email" do
+      pending
+      # post "/users/#{@position1.user.id}/positions/#{@position1.id}/related_emails.json", :related_email => {:guid => '1234er'}
+      #
+      #    res = ActiveSupport::JSON.decode(response.body)
+      #    res['related_email'].should == '1234er'
+      #    res['user_id'].should == @user.id
+      #    response.status.should == 201
+    end
+
+    it "does not create a position when a name is not specified" do
+      post "/users/#{@user.id}/positions.json"
+
+      res = ActiveSupport::JSON.decode(response.body)
+      response.status.should == 422
+    end
+
+    it "does not create a position when the user doesn't exist" do
+      post "/users/88888/positions.json", :position => {:name => 'position_name'}
+
+      response.status.should == 404
+    end
+  end
+
 end
