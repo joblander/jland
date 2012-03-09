@@ -175,6 +175,15 @@ describe "PositionsApis" do
       @position1.pstatus.should == 'applied'
       response.status.should == 204
     end
+
+    it "starrs a position when given ':position => {:starred => 'true'}'" do
+      put "/users/#{@user.id}/positions/#{@position1.id}.json", :position => {:starred => 'true'}
+
+      @position1.starred.should be_false
+      @position1.reload
+      @position1.starred.should be_true
+      response.status.should == 204
+    end
   end
 
   describe "POST /users/:user_id/positions/:position_id/related_emails" do
