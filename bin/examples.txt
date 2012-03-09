@@ -11,6 +11,7 @@ http GET http://joblander.herokuapp.com/users/1/positions.json # get all positio
 http GET http://joblander.herokuapp.com/users/1/positions/2.json # get a position for a user
 http PUT http://joblander.herokuapp.com/users/1/positions/2.json name=posi details="some details" # update a position
 http PUT http://joblander.herokuapp.com/users/1/positions/2.json pstatus=applied # update a position - change status
+http PUT http://joblander.herokuapp.com/users/1/positions/2.json starred=true # update a position - star
 http POST http://joblander.herokuapp.com/users/1/positions/2/related_emails.json guid=fh33k
 http DELETE http://joblander.herokuapp.com/users/1/positions/2/related_emails/1.json
 http DELETE http://joblander.herokuapp.com/users/1/positions/2.json
