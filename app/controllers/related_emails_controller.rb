@@ -7,7 +7,7 @@ class RelatedEmailsController < ApiController
 
   def destroy
     related_email.destroy
-    head :no_content
+    respond_with related_email
   end
 
   private

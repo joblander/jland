@@ -5,9 +5,8 @@ class PositionsController < ApiController
   end
 
   def create
-    # we're using @position in case we would want to use it in the view in the future.
-    @position = user.positions.create(params[:position])
-    respond_with user, @position, :include => :related_emails
+    pos = user.positions.create(params[:position])
+    respond_with user, pos, :include => :related_emails
   end
 
   def show
@@ -16,7 +15,7 @@ class PositionsController < ApiController
 
   def destroy
     position.destroy
-    head :no_content
+    respond_with position
   end
 
   def update
