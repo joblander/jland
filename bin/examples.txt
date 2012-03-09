@@ -3,6 +3,7 @@ curl -i http://joblander.herokuapp.com/users/1/positions.json # get all position
 curl -i http://joblander.herokuapp.com/users/1/positions/2.json # get a position for a user
 curl -i -XPUT -H"Content-Type:application/json" http://joblander.herokuapp.com/users/1/positions/2.json -d "{\"name\":\"position\",\"details\":\"position description\"}"
 curl -i -XPUT -H"Content-Type:application/json" http://joblander.herokuapp.com/users/1/positions/2.json -d "{\"pstatus\":\"applied\"}"
+curl -i -XPOST http://joblander.herokuapp.com/users/1/positions/2/related_emails.json -d "{\"guid\":\"sgagas\"}"
 
 # using httpie:
 http POST http://joblander.herokuapp.com/users/1/positions.json name=posi details="some details" details=det company=com comments=com app_link=link app_due_date=1/1/2012 # create a position
@@ -10,3 +11,6 @@ http GET http://joblander.herokuapp.com/users/1/positions.json # get all positio
 http GET http://joblander.herokuapp.com/users/1/positions/2.json # get a position for a user
 http PUT http://joblander.herokuapp.com/users/1/positions/2.json name=posi details="some details" # update a position
 http PUT http://joblander.herokuapp.com/users/1/positions/2.json pstatus=applied # update a position - change status
+http POST http://joblander.herokuapp.com/users/1/positions/2/related_emails.json guid=fh33k
+http DELETE http://joblander.herokuapp.com/users/1/positions/2/related_emails/1.json
+http DELETE http://joblander.herokuapp.com/users/1/positions/2.json
