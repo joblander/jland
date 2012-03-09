@@ -175,31 +175,6 @@ describe "PositionsApis" do
       response.status.should == 201
     end
 
-    it "does not create a position when a name is not specified" do
-      post "/users/#{@user.id}/positions.json"
-
-      res = ActiveSupport::JSON.decode(response.body)
-      response.status.should == 422
-    end
-
-    it "does not create a position when the user doesn't exist" do
-      post "/users/88888/positions.json", :position => {:name => 'position_name'}
-
-      response.status.should == 404
-    end
-  end
-
-  describe "POST /users/:user_id/positions/:position_id/related_emails" do
-    # TODO test that we get the minimal set of required fields
-    it "creates a related_email" do
-      post "/users/#{@position1.user.id}/positions/#{@position1.id}/related_emails.json", :related_email => {:guid => '1234er'}
-
-      res = ActiveSupport::JSON.decode(response.body)
-      res['guid'].should == '1234er'
-      res['position_id'].should == @position1.id
-      response.status.should == 201
-    end
-
     it "does not create a related email when a guid is not specified" do
       post "/users/#{@position1.user.id}/positions/#{@position1.id}/related_emails.json"
 
@@ -208,10 +183,17 @@ describe "PositionsApis" do
     end
 
     it "does not create a relaed email when the user doesn't exist" do
-      post "/users/88888/positions.json", :position => {:name => 'position_name'}
+      post "/users/88888888/positions/#{@position1.id}/related_emails.json", :related_email => {:guid => '1234er'}
+
+      response.status.should == 404
+    end
+
+    it "does not create a relaed email when the position doesn't exist" do
+      post "/users/#{@user3.id}/positions/88888888/related_emails.json", :related_email => {:guid => '1234er'}
 
       response.status.should == 404
     end
   end
+
 
 end

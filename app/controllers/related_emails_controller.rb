@@ -1,4 +1,5 @@
 class RelatedEmailsController < ApplicationController
+  rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
   respond_to :json
 
   def create
@@ -23,5 +24,9 @@ class RelatedEmailsController < ApplicationController
 
   def related_email
     @related_email ||= RelatedEmail.find(params[:id])
+  end
+
+  def record_not_found
+    respond_with({}, :status => :not_found, :location => nil)
   end
 end
