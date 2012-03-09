@@ -1,6 +1,4 @@
-class RelatedEmailsController < ApplicationController
-  rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
-  respond_to :json
+class RelatedEmailsController < ApiController
 
   def create
     @related_email = position.related_emails.create(params[:related_email])
@@ -13,10 +11,6 @@ class RelatedEmailsController < ApplicationController
   end
 
   private
-
-  def position
-    @position ||= Position.find(params[:position_id])
-  end
 
   def related_email
     @related_email ||= RelatedEmail.find(params[:id])

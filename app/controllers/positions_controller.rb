@@ -1,6 +1,4 @@
-class PositionsController < ApplicationController
-  rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
-  respond_to :json
+class PositionsController < ApiController
 
   def index
     respond_with user.positions, :include => :related_emails
