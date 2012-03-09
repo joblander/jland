@@ -18,15 +18,8 @@ class RelatedEmailsController < ApplicationController
     @position ||= Position.find(params[:position_id])
   end
 
-  def user
-    @user ||= User.find(params[:user_id])
-  end
-
   def related_email
     @related_email ||= RelatedEmail.find(params[:id])
   end
 
-  def record_not_found
-    respond_with({}, :status => :not_found, :location => nil)
-  end
 end

@@ -31,12 +31,4 @@ class PositionsController < ApplicationController
   def position
     @position ||= Position.find(params[:id])
   end
-
-  def user
-    @user ||= User.find(params['user_id'])
-  end
-
-  def record_not_found
-    respond_with({}, :status => :not_found, :location => nil)
-  end
 end
