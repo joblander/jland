@@ -1,5 +1,6 @@
 class RelatedEmail < ActiveRecord::Base
   belongs_to :position
+  validates :guid, :presence => true
 end
 # == Schema Information
 #

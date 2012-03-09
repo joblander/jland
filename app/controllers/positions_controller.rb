@@ -8,8 +8,7 @@ class PositionsController < ApplicationController
 
   def create
     # we're using @position in case we would want to use it in the view in the future.
-    @position = user.positions.build(params[:position])
-    @position.save
+    @position = user.positions.create(params[:position])
     respond_with user, @position, :include => :related_emails
   end
 
