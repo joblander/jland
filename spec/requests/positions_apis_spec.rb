@@ -118,6 +118,17 @@ describe "PositionsApis" do
 
       response.status.should == 200
     end
+
+    it "gets a position with multiple related emails", :rel=>true do
+      related_email = FactoryGirl.create(:related_email, :guid => '11s')
+      related_email2 = FactoryGirl.create(:related_email, :guid => '12s', :position_id => related_email.position_id)
+      get "/users/#{related_email.position.user.id}/positions/#{related_email.position.id}.json"
+
+      res = ActiveSupport::JSON.decode(response.body)
+      res['related_emails'].size.should == 2
+
+      response.status.should == 200
+    end
   end
 
   describe "DELETE /users/:user_id/positions/:position_id.json" do
