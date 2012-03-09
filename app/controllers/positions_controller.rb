@@ -21,7 +21,7 @@ class PositionsController < ApiController
 
   def update
     position.update_attributes(params[:position])
-    respond_with(user, position, :status => :ok)
+    respond_with user, position, :status => :ok
   end
 
   private

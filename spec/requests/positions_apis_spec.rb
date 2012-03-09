@@ -9,6 +9,8 @@ describe "PositionsApis" do
     @position1 = FactoryGirl.create(:position, :name => 'pname1', :source => 'http://bla1', :user => @user)
     @position2 = FactoryGirl.create(:position, :name => 'pname2', :source => 'http://bla2', :user => @user)
     @position3 = FactoryGirl.create(:position, :name => 'pname3', :source => 'http://bla2', :user => @user3)
+    @related1 = FactoryGirl.create(:related_email, :guid => 'guid1')
+    @related2 = FactoryGirl.create(:related_email, :guid => 'guid1')
   end
 
   describe "GET /users/:user_id/positions.json" do
@@ -139,7 +141,7 @@ describe "PositionsApis" do
       id = 88888
       Position.exists?(id).should be_false
       User.exists?(id).should be_false
-      delete "/users/id/positions/#{id}.json"
+      delete "/users/#{id}/positions/#{id}.json"
       response.status.should == 204
     end
   end
@@ -192,6 +194,33 @@ describe "PositionsApis" do
       post "/users/#{@user3.id}/positions/88888888/related_emails.json", :related_email => {:guid => '1234er'}
 
       response.status.should == 404
+    end
+
+    describe "DELETE /users/:user_id/positions/:position_id/related_emails/:related_email.json" do
+      it "deletes a related email" do
+        RelatedEmail.exists?(@related1.id).should be_true
+        delete "/users/#{@related1.position.user.id}/positions/#{@related1.position.id}/related_emails/#{@related1.id}.json"
+        Position.exists?(@related1.id).should be_false
+
+        response.body.should be_empty
+        response.status.should == 204
+      end
+
+      it "should not care if instructed to delete a position for a non-existing position" do
+        id = 88888
+        RelatedEmail.exists?(id).should be_false
+        delete "/users/#{@related1.position.user.id}/positions/#{@related1.position.id}/related_emails/#{id}.json"
+        response.status.should == 204
+      end
+
+      it "should not care if instructed to delete a position for a non-existing user" do
+        id = 88888
+        RelatedEmail.exists?(id).should be_false
+        Position.exists?(id).should be_false
+        User.exists?(id).should be_false
+        delete "/users/#{id}/positions/#{id}/related_emails/#{id}.json"
+        response.status.should == 204
+      end
     end
   end
 
