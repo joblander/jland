@@ -13,7 +13,20 @@ describe SimplyHiredSearch do
       SimplyHiredSearch.search('java').should_not be_empty
     end
   end
-  it "returns some results for a term and a location"
+  it "fetches all interesting fields for positions" do
+    VCR.use_cassette('ruby') do
+      pos = SimplyHiredSearch.search('ruby').first
+      pos.title.should == 'Ruby Developer Job'
+      pos.url.should == 'http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMTA6MDk6MzkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTM1NDkyJmNfaWQ9MTQxMjcmY3BjPTAuNjYmcG9zPTEmaGFzaD1lZmYzNGQzMGZjOTkwMmRlY2QyNGMzMmVjNmY4N2U4OA%3D%3D%3B2d3754b14c4205e786e2dff0d51d0cc5/jobkey-15366.1762587A0/pub_id-41106/cjp-0'
+      pos.source = "Rackspace"
+      pos.city = "Austin"
+      pos.state = "TX"
+      pos.country = "US"
+      pos.description.should include('Job Details Ruby Developer - 12925')
+      pos.post_date.should == "2012-03-06T05:46:45Z"
+      pos.job_type.should == "sponsored"
+    end
+  end
 end
 
 # conn = Faraday::Connection.new(:url => 'http://localhost:7777') do |builder|

@@ -1,0 +1,130 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.simplyhired.com/a/jobs-api/xml-v2/q-ruby?cflg=r&clip=74.94.200.198&jbd=joblander.jobamatic.com&pshid=41106&ssty=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 13 Mar 2012 17:09:40 GMT
+      Content-Type:
+      - text/xml;charset=ISO-8859-1
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=20
+      Vary:
+      - Host
+      Set-Cookie:
+      - gc=1; expires=Wed, 14-Mar-2012 17:09:39 GMT; path=/
+      - shmk=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+      - shup=fvt%3D4f5f7f53%26ncs%3D1%26lst%3D4f5f7f53; expires=Thu, 12-Apr-2012 17:09:39
+        GMT; path=/
+      - shut=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.simplyhired.com
+      Cache-Control:
+      - no-cache, must-revalidate
+      P3p:
+      - CP="CAO DSP COR CURa ADMa DEVa TAIa OUR BUS IND UNI COM NAV INT"
+      Content-Length:
+      - '9357'
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" standalone=\"no\" ?>\n<!DOCTYPE
+        shrs SYSTEM \"http://api.simplyhired.com/c/jobs-api/html/sr2.dtd\">\n\n<shrs>\n<rq
+        url=\"http://api.simplyhired.com/a/jobs-api/xml_v2/q-ruby\">\n  <t>Ruby Jobs</t>\n
+        \ <dt>2012-03-13T17:09:39Z</dt>\n  <si>0</si>\n  <rpd>10</rpd>\n  <tr>16524</tr>\n
+        \ <tv>1000</tv>\n  <em url=\"\"/>\n<h>\n  <kw pos=\"1\"/>\n</h>\n</rq>\n<rs>\n<r>\n
+        \ <jt>Ruby Developer Job</jt>\n  <cn url=\"\">Rackspace</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMTA6MDk6MzkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTM1NDkyJmNfaWQ9MTQxMjcmY3BjPTAuNjYmcG9zPTEmaGFzaD1lZmYzNGQzMGZjOTkwMmRlY2QyNGMzMmVjNmY4N2U4OA%3D%3D%3B2d3754b14c4205e786e2dff0d51d0cc5/jobkey-15366.1762587A0/pub_id-41106/cjp-0\">Rackspace</src>\n
+        \ <ty>sponsored</ty>\n  <loc cty=\"Austin\" st=\"TX\" postal=\"78759\" county=\"\"
+        region=\"\" country=\"US\">Austin, TX</loc>\n  <ls>2012-03-06T05:46:45Z</ls>\n
+        \ <dp>2012-03-06T05:46:45Z</dp>\n  <e>Job Details Ruby Developer - 12925 This
+        details all the information about the job posting. To submit your rsum/CV,
+        click ... Rsum/CV to this Job' button. Show Instructions Job Title Ruby Developer
+        Category Software Development Requisition #...</e>\n</r>\n<r>\n  <jt>Ruby
+        on Rails Software Engineer</jt>\n  <cn url=\"\">Cameron Craig Group</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMTA6MDk6MzkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTM3NzU3JmNfaWQ9MTQ1MjMmY3BjPTAuNjUmcG9zPTImaGFzaD1hYzY2YWFlZGQ4NGMzMDhlZmRlZTA2MzEyMTRiZTlkYg%3D%3D%3B9151a78cfd4a4d238a288a4806523226/jobkey-bfe8f1e12d26a669ee5165f488153e5fa33ba/pub_id-41106/cjp-1\">Cameron
+        Craig Group</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Boston\" st=\"MA\" postal=\"02121\"
+        county=\"\" region=\"\" country=\"US\">Boston, MA</loc>\n  <ls>2012-03-01T21:18:43Z</ls>\n
+        \ <dp>2012-03-01T21:18:43Z</dp>\n  <e>They are creating a next generation
+        social networking platform/tool in a Ruby on Rails environment ... from gather
+        requirements through product release - Ruby, Ruby on Rails, Java, memcached,
+        load balancing, linux,...</e>\n</r>\n<r>\n  <jt>Ruby and Rails Developers</jt>\n
+        \ <cn url=\"\">Kforce Technology</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMTA6MDk6MzkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTUzOTUmY19pZD00NzUyJmNwYz0wLjM1JnBvcz0zJmhhc2g9YzgzOWMzOTUyYTUxZTc4OWYzNDlmMTdkMzI4MWVjZTY%3D%3Bef695ba38c40f92e6e7c7144957979cb/jobkey-16372.ITAQG1139561/pub_id-41106/cjp-2\">Kforce
+        Technology</src>\n  <ty>sponsored</ty>\n  <loc cty=\"New York\" st=\"NY\"
+        postal=\"10012\" county=\"\" region=\"\" country=\"US\">New York, NY</loc>\n
+        \ <ls>2012-03-02T17:52:58Z</ls>\n  <dp>2012-03-02T17:52:58Z</dp>\n  <e>You
+        will be a Ruby on Rails/Java Developer of a SOA / Web Services platform that
+        integrates with 3rd party financial and gaming systems. You will be a core
+        contributor to the development and implementation of a robust platform for
+        a...</e>\n</r>\n<r>\n  <jt>Ruby on Rails Software Engineer</jt>\n  <cn url=\"\">Kforce
+        Technology</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMTA6MDk6MzkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTUzOTUmY19pZD00ODU4JmNwYz0wLjM1JnBvcz00Jmhhc2g9MmUyZWFlNDUyMzM5ZTM2NDhhZTgwOGNhYzc4OWRkNjI%3D%3B90aad8d3eb14a0534caea9adc57c0d92/jobkey-16372.ITAQG1136475/pub_id-41106/cjp-3\">Kforce
+        Technology</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Watertown\" st=\"MA\"
+        postal=\"02472\" county=\"\" region=\"\" country=\"US\">Watertown, MA</loc>\n
+        \ <ls>2012-02-20T16:49:10Z</ls>\n  <dp>2012-02-20T16:49:10Z</dp>\n  <e>company
+        to develop innovative Web applications using Ruby on Rails. This position
+        requires a solid understanding ... Specific Functions; * Enhancing and extending
+        existing Ruby on Rails Web applications * Creating new applications...</e>\n</r>\n<r>\n
+        \ <jt>Ruby on Rails Developer</jt>\n  <cn url=\"\">Kforce Technology</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMTA6MDk6MzkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTUzOTUmY19pZD00ODYxJmNwYz0wLjM1JnBvcz01Jmhhc2g9YjAzNjYyMWFlODMxZTY2ZTMzZDY3MDUyYzAyMDYwNjE%3D%3B4109e61101e42a8dd8c2ce49c8a5b1d5/jobkey-16372.ITWQG1135693/pub_id-41106/cjp-4\">Kforce
+        Technology</src>\n  <ty>sponsored</ty>\n  <loc cty=\"San Diego\" st=\"CA\"
+        postal=\"92121\" county=\"\" region=\"\" country=\"US\">San Diego, CA</loc>\n
+        \ <ls>2012-02-16T16:48:46Z</ls>\n  <dp>2012-02-16T16:48:46Z</dp>\n  <e>t's
+        application to EC2 * Write RSpec tests to cover all features delivered * Ensure
+        that tests work properly across our games * Tune and troubleshoot application
+        and database * Profile Ruby, Rails, MySQL, Redis, MongoDB, and other pieces...</e>\n</r>\n<r>\n
+        \ <jt>Ruby on Rails / Java Developer</jt>\n  <cn url=\"\">Kforce Technology</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMTA6MDk6MzkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTUzOTUmY19pZD00NzUyJmNwYz0wLjM1JnBvcz02Jmhhc2g9YzgzOWMzOTUyYTUxZTc4OWYzNDlmMTdkMzI4MWVjZTY%3D%3B4b29985a613f676d53d94f2906afa984/jobkey-16372.ITAQG1140185/pub_id-41106/cjp-5\">Kforce
+        Technology</src>\n  <ty>sponsored</ty>\n  <loc cty=\"New York\" st=\"NY\"
+        postal=\"10013\" county=\"\" region=\"\" country=\"US\">New York, NY</loc>\n
+        \ <ls>2012-03-05T23:50:44Z</ls>\n  <dp>2012-03-05T23:50:44Z</dp>\n  <e>Our
+        client located in New York City, New York is seeking a motivated Developer
+        to become part of their dynamic Application Development Team through the complete
+        software life cycle for back-end support systems to produce robust bug free...</e>\n</r>\n<r>\n
+        \ <jt>Software Engineer - Ruby on Rails</jt>\n  <cn url=\"\">Kforce Technology</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMTA6MDk6MzkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTUzOTUmY19pZD00ODYxJmNwYz0wLjM1JnBvcz03Jmhhc2g9YjAzNjYyMWFlODMxZTY2ZTMzZDY3MDUyYzAyMDYwNjE%3D%3B8cdd54bdef6a4c6acf11fc55e9f293db/jobkey-16372.ITWQG1131384/pub_id-41106/cjp-6\">Kforce
+        Technology</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Sunnyvale\" st=\"CA\"
+        postal=\"94086\" county=\"\" region=\"\" country=\"US\">Sunnyvale, CA</loc>\n
+        \ <ls>2012-01-31T21:51:53Z</ls>\n  <dp>2012-01-31T21:51:53Z</dp>\n  <e>This
+        opportunity is for a'hot' start-up company with veteran leadership in video
+        / streaming technology revolutionizing the way digital media is transported
+        and shared over the Internet. Responsibilities Include: * Design improvements
+        to...</e>\n</r>\n<r>\n  <jt>Ruby on Rails / Java Technology Lead</jt>\n  <cn
+        url=\"\">Kforce Technology</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMTA6MDk6MzkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTUzOTUmY19pZD00NzUyJmNwYz0wLjM1JnBvcz04Jmhhc2g9YzgzOWMzOTUyYTUxZTc4OWYzNDlmMTdkMzI4MWVjZTY%3D%3B0b0a7d3f7fbe37ba1d1ec5ceec828b33/jobkey-16372.ITAQG1139562/pub_id-41106/cjp-7\">Kforce
+        Technology</src>\n  <ty>sponsored</ty>\n  <loc cty=\"New York\" st=\"NY\"
+        postal=\"10012\" county=\"\" region=\"\" country=\"US\">New York, NY</loc>\n
+        \ <ls>2012-03-02T17:52:58Z</ls>\n  <dp>2012-03-02T17:52:58Z</dp>\n  <e>You
+        will lead the development of a Ruby on Rails and Java / Web Services platform
+        that integrates with 3rd party financial and gaming systems. You will be a
+        core contributor to the development and implementation of a robust platform
+        for a...</e>\n</r>\n<r>\n  <jt>Senior Ruby on Rails Engineer / Architect</jt>\n
+        \ <cn url=\"\">Kforce Technology</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMTA6MDk6MzkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTUzOTUmY19pZD00ODYxJmNwYz0wLjM1JnBvcz05Jmhhc2g9YjAzNjYyMWFlODMxZTY2ZTMzZDY3MDUyYzAyMDYwNjE%3D%3B116de0bfe5a25944dd65c2462102cfbb/jobkey-16372.ITWQG1139217/pub_id-41106/cjp-8\">Kforce
+        Technology</src>\n  <ty>sponsored</ty>\n  <loc cty=\"San Francisco\" st=\"CA\"
+        postal=\"94105\" county=\"\" region=\"\" country=\"US\">San Francisco, CA</loc>\n
+        \ <ls>2012-03-01T18:54:32Z</ls>\n  <dp>2012-03-01T18:54:32Z</dp>\n  <e>all
+        the newest 'toys' to include the latest versions of Ruby and RoR, Agile Development,
+        Paired Programming, and TDD. They have some interesting projects in which
+        you can design and implement products from scratch. The Job: * Develop our...</e>\n</r>\n<r>\n
+        \ <jt>Ruby and Rails / Java Developers - Three Positions</jt>\n  <cn url=\"\">Kforce
+        Technology</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMTA6MDk6MzkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTUzOTUmY19pZD00NzUyJmNwYz0wLjM1JnBvcz0xMCZoYXNoPWM4MzljMzk1MmE1MWU3ODlmMzQ5ZjE3ZDMyODFlY2U2%3B50643d45afbe4ea882ca3a41f70488f2/jobkey-16372.ITAQG1137658/pub_id-41106/cjp-9\">Kforce
+        Technology</src>\n  <ty>sponsored</ty>\n  <loc cty=\"New York\" st=\"NY\"
+        postal=\"10012\" county=\"\" region=\"\" country=\"US\">New York, NY</loc>\n
+        \ <ls>2012-02-23T21:53:11Z</ls>\n  <dp>2012-02-23T21:53:11Z</dp>\n  <e>The
+        candidate will be a Ruby on Rails/Java Developer of a SOA / Web Services platform
+        that integrates with 3rd party financial and gaming systems. They will be
+        a core contributor to the development and implementation of a robust platform...</e>\n</r>\n</rs>\n<pjl>\n</pjl>\n</shrs>\n"
+    http_version: 
+  recorded_at: Tue, 13 Mar 2012 17:09:40 GMT
+recorded_with: VCR 2.0.0
