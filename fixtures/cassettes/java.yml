@@ -1,0 +1,123 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.simplyhired.com/a/jobs-api/xml-v2/q-java?cflg=r&clip=74.94.200.198&jbd=joblander.jobamatic.com&pshid=41106&ssty=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 13 Mar 2012 16:58:20 GMT
+      Content-Type:
+      - text/xml;charset=ISO-8859-1
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=20
+      Vary:
+      - Host
+      Set-Cookie:
+      - gc=1; expires=Wed, 14-Mar-2012 16:58:19 GMT; path=/
+      - shmk=deleted; expires=Mon, 14-Mar-2011 16:58:18 GMT; path=/
+      - shup=fvt%3D4f5f7cab%26ncs%3D1%26lst%3D4f5f7cab; expires=Thu, 12-Apr-2012 16:58:19
+        GMT; path=/
+      - shut=deleted; expires=Mon, 14-Mar-2011 16:58:18 GMT; path=/; domain=.simplyhired.com
+      Cache-Control:
+      - no-cache, must-revalidate
+      P3p:
+      - CP="CAO DSP COR CURa ADMa DEVa TAIa OUR BUS IND UNI COM NAV INT"
+      Content-Length:
+      - '9189'
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" standalone=\"no\" ?>\n<!DOCTYPE
+        shrs SYSTEM \"http://api.simplyhired.com/c/jobs-api/html/sr2.dtd\">\n\n<shrs>\n<rq
+        url=\"http://api.simplyhired.com/a/jobs-api/xml_v2/q-java\">\n  <t>Java Jobs</t>\n
+        \ <dt>2012-03-13T16:58:19Z</dt>\n  <si>0</si>\n  <rpd>10</rpd>\n  <tr>122440</tr>\n
+        \ <tv>1000</tv>\n  <em url=\"\"/>\n<h>\n  <kw pos=\"1\"/>\n</h>\n</rq>\n<rs>\n<r>\n
+        \ <jt>Java Developer</jt>\n  <cn url=\"\">LifeWay</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMDk6NTg6MTkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTIzMDQ3JmNfaWQ9MTA3NDcmY3BjPTEuODEmcG9zPTEmaGFzaD02N2UwOTIzMTZiNTA2NmVhZWM3OWI3YmQwOGU4YWJkOA%3D%3D%3Be79845b54d99664a9070ae238cb4b4dc/jobkey-6256.654667/pub_id-41106/cjp-0\">LifeWay</src>\n
+        \ <ty>sponsored</ty>\n  <loc cty=\"Nashville\" st=\"TN\" postal=\"37234\"
+        county=\"\" region=\"\" country=\"US\">Nashville, TN</loc>\n  <ls>2012-02-17T21:24:13Z</ls>\n
+        \ <dp>2012-02-17T21:24:13Z</dp>\n  <e>Christian Resources in Nashville, TN,
+        has an exciting Java Developer opportunity. This position is responsible for
+        ... Technical skill sets required include: Development Skills  Java/ Java
+        EE development experience Design/Architecture Skil...</e>\n</r>\n<r>\n  <jt>Java
+        Web Application Developer</jt>\n  <cn url=\"\">Batesville Casket Company</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMDk6NTg6MTkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTI2NDcxJmNfaWQ9MTE4NDgmY3BjPTEuODAmcG9zPTImaGFzaD05ZjEwNTgxMDdjMDI3ZjY5YjM0ODIxNjEwYzhkMDkxZg%3D%3D%3B80f71987e991ab0beeb405cd77edafef/jobkey-9356b0ebc427724073e47975233907940438146/pub_id-41106/cjp-1\">Batesville
+        Casket Company</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Batesville\" st=\"IN\"
+        postal=\"47006\" county=\"\" region=\"\" country=\"US\">Batesville, IN</loc>\n
+        \ <ls>2012-03-01T06:02:58Z</ls>\n  <dp>2012-02-27T08:41:53Z</dp>\n  <e>Position
+        Title: Java Web Application Developer Department/Function: Batesville Interactive
+        Location: Indianapolis, India ... to drive value and profitability. Position
+        Summary The Java Web Application Developer for the Batesville...</e>\n</r>\n<r>\n
+        \ <jt>Java Developer Job</jt>\n  <cn url=\"\">Rackspace</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMDk6NTg6MTkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTM1NDkyJmNfaWQ9MTQxMjcmY3BjPTEuNTAmcG9zPTMmaGFzaD05ZGJkZDQ2NjMyODdlNjBhMmM2YTg5NjM3OWYwOGQ0YQ%3D%3D%3Bf6f1c56927e576e089213c41053c54ae/jobkey-15366.1705971A1/pub_id-41106/cjp-2\">Rackspace</src>\n
+        \ <ty>sponsored</ty>\n  <loc cty=\"San Antonio\" st=\"TX\" postal=\"78229\"
+        county=\"\" region=\"\" country=\"US\">San Antonio, TX</loc>\n  <ls>2012-03-06T05:46:47Z</ls>\n
+        \ <dp>2012-03-03T05:32:56Z</dp>\n  <e>Job Details Java Developer - 15341 This
+        details all the information about the job posting. To submit your rsum/CV,
+        click ... Rsum/CV to this Job' button. Show Instructions Job Title Java Developer
+        Category Software Development Requisition #...</e>\n</r>\n<r>\n  <jt>Java
+        Developer</jt>\n  <cn url=\"\">Intertech</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMDk6NTg6MTkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTMwMzY0JmNfaWQ9MTQyNTEmY3BjPTEuNTAmcG9zPTQmaGFzaD0wNjBkMDJlZTM1MGUzNDgyOWZkY2I3NjM3ZGYyYjFiOQ%3D%3D%3Bd96542a7e7cb6bb2d18133029aa21ef2/jobkey-15287.1142/pub_id-41106/cjp-3\">Intertech</src>\n
+        \ <ty>sponsored</ty>\n  <loc cty=\"Golden Valley\" st=\"MN\" postal=\"55427\"
+        county=\"\" region=\"\" country=\"US\">Golden Valley, MN</loc>\n  <ls>2012-02-22T06:01:54Z</ls>\n
+        \ <dp>2012-02-22T06:01:54Z</dp>\n  <e>Intertech, is working with one of our
+        premiere clients for a Senior/Lead Java Developer contract position ... As
+        a Java Developer you will: Have the freedom to choose the tools and o/s (Linux,
+        Mac, or Windows) that make you the mo...</e>\n</r>\n<r>\n  <jt>JAVA / JEE
+        Software Engineer</jt>\n  <cn url=\"\">SRA International</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMDk6NTg6MTkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTE0NjE1JmNfaWQ9MTEyMDcmY3BjPTEuNTAmcG9zPTUmaGFzaD1kNjQxZjE2ZTg0MDQyZDNmNWRjN2IyYjc5ZDc4N2Y3MA%3D%3D%3B09dc5b12e31546ae32a1c08b6efca6cf/jobkey-c19f9e18446a94ff94684b4683f070f695547a/pub_id-41106/cjp-4\">SRA
+        International</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Arlington\" st=\"VA\"
+        postal=\"22223\" county=\"\" region=\"\" country=\"US\">Arlington, VA</loc>\n
+        \ <ls>2012-03-12T20:34:55Z</ls>\n  <dp>2012-03-12T20:34:55Z</dp>\n  <e>SRA
+        is seeking a Software Engineer with experience in JAVA / J2EE to join our
+        program that is enhancing the Worldwide Re ... and third normal form. Implementations
+        will utilize Java centric technologies such as Eclipse, Google Web...</e>\n</r>\n<r>\n
+        \ <jt>Sr Java Developer Job</jt>\n  <cn url=\"\">Rackspace</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMDk6NTg6MTkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTM1NDkyJmNfaWQ9MTQxMjcmY3BjPTEuNTAmcG9zPTYmaGFzaD05ZGJkZDQ2NjMyODdlNjBhMmM2YTg5NjM3OWYwOGQ0YQ%3D%3D%3Be2b34a25310a5d43e6951bfc6be89f73/jobkey-15366.1758665A0/pub_id-41106/cjp-5\">Rackspace</src>\n
+        \ <ty>sponsored</ty>\n  <loc cty=\"San Antonio\" st=\"TX\" postal=\"78229\"
+        county=\"\" region=\"\" country=\"US\">San Antonio, TX</loc>\n  <ls>2012-03-03T05:32:57Z</ls>\n
+        \ <dp>2012-03-03T05:32:57Z</dp>\n  <e>Job Details Sr Java Developer - 15730
+        This details all the information about the job posting. To submit your rsum/CV,
+        ... Rsum/CV to this Job' button. Show Instructions Job Title Sr Java Developer
+        Category Software Development Requisition #...</e>\n</r>\n<r>\n  <jt>Senior
+        Java Developers</jt>\n  <cn url=\"\">Intertech</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMDk6NTg6MTkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTMwMzY0JmNfaWQ9MTQyNTEmY3BjPTEuNTAmcG9zPTcmaGFzaD0wNjBkMDJlZTM1MGUzNDgyOWZkY2I3NjM3ZGYyYjFiOQ%3D%3D%3Bbe57683fbd034cad4918e3abf02f6c92/jobkey-15287.1153/pub_id-41106/cjp-6\">Intertech</src>\n
+        \ <ty>sponsored</ty>\n  <loc cty=\"Chicago\" st=\"IL\" postal=\"60623\" county=\"\"
+        region=\"\" country=\"US\">Chicago, IL</loc>\n  <ls>2012-02-28T16:20:59Z</ls>\n
+        \ <dp>2012-02-28T16:20:59Z</dp>\n  <e>java Developers responsibilities lie
+        within analysis and design of Java solutions ... experience in designing,
+        deploying, J2EE applications Sun Java certification strongly preferred Detail-oriented
+        design...</e>\n</r>\n<r>\n  <jt>Junior - Mid Java Developer</jt>\n  <cn url=\"\">Intertech</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMDk6NTg6MTkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTMwMzY0JmNfaWQ9MTQyNTEmY3BjPTEuNTAmcG9zPTgmaGFzaD0wNjBkMDJlZTM1MGUzNDgyOWZkY2I3NjM3ZGYyYjFiOQ%3D%3D%3B195d97f997aaecd9791a399c0382b22e/jobkey-15287.1126/pub_id-41106/cjp-7\">Intertech</src>\n
+        \ <ty>sponsored</ty>\n  <loc cty=\"St Paul\" st=\"MN\" postal=\"55144\" county=\"\"
+        region=\"\" country=\"US\">St Paul, MN</loc>\n  <ls>2012-02-22T06:01:54Z</ls>\n
+        \ <dp>2012-02-22T06:01:54Z</dp>\n  <e>is working with one of our premiere
+        clients to find a Java Developer for a contract to hire position. A Java Developer
+        is an expert at developing and troubleshooting software and following the
+        processes. You should be able to be given...</e>\n</r>\n<r>\n  <jt>Senior
+        Java Developer Architect</jt>\n  <cn url=\"\">Intertech</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMDk6NTg6MTkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTMwMzY0JmNfaWQ9MTQyNTEmY3BjPTEuNTAmcG9zPTkmaGFzaD0wNjBkMDJlZTM1MGUzNDgyOWZkY2I3NjM3ZGYyYjFiOQ%3D%3D%3B9ca4e1064b80dcfc0a2e3cad0389257f/jobkey-15287.1001/pub_id-41106/cjp-8\">Intertech</src>\n
+        \ <ty>sponsored</ty>\n  <loc cty=\"Minneapolis\" st=\"MN\" postal=\"55422\"
+        county=\"\" region=\"\" country=\"US\">Minneapolis, MN</loc>\n  <ls>2012-02-22T06:01:53Z</ls>\n
+        \ <dp>2012-02-22T06:01:53Z</dp>\n  <e>to join our world-class team who have
+        solid experience in Java open source technologies and tools, SOA and enterprise
+        architecture. In addition, we are looking for: Core/Required Skills 10 years
+        of solid software development experience...</e>\n</r>\n<r>\n  <jt>Java Developers</jt>\n
+        \ <cn url=\"\">Intertech</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTMgMDk6NTg6MTkmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTMwMzY0JmNfaWQ9MTQyNTEmY3BjPTEuNTAmcG9zPTEwJmhhc2g9MDYwZDAyZWUzNTBlMzQ4MjlmZGNiNzYzN2RmMmIxYjk%3D%3B8e6d732f2267a3b20cff1597dde044b2/jobkey-15287.1109/pub_id-41106/cjp-9\">Intertech</src>\n
+        \ <ty>sponsored</ty>\n  <loc cty=\"Minneapolis\" st=\"MN\" postal=\"55422\"
+        county=\"\" region=\"\" country=\"US\">Minneapolis, MN</loc>\n  <ls>2012-02-22T06:01:54Z</ls>\n
+        \ <dp>2012-02-22T06:01:54Z</dp>\n  <e>is working with one of our premium clients
+        to look for Java developers! Provide programming services for Point of ...
+        PRIMARY RESPONSIBILITIES: Development &amp; Support: Using the Java programming
+        language, develop and maintain current and...</e>\n</r>\n</rs>\n<pjl>\n</pjl>\n</shrs>\n"
+    http_version: 
+  recorded_at: Tue, 13 Mar 2012 16:58:20 GMT
+recorded_with: VCR 2.0.0
