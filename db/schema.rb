@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120309183555) do
+ActiveRecord::Schema.define(:version => 20120315162257) do
 
   create_table "positions", :force => true do |t|
     t.integer  "user_id",                                :null => false
@@ -27,6 +27,10 @@ ActiveRecord::Schema.define(:version => 20120309183555) do
     t.text     "app_link"
     t.datetime "app_due_date"
     t.boolean  "starred",        :default => false,      :null => false
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.datetime "post_date"
   end
 
   add_index "positions", ["lead_search_id"], :name => "index_positions_on_lead_search_id"

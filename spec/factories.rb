@@ -15,4 +15,15 @@ FactoryGirl.define do
     sequence(:guid) { |n| "aaa#{n}" }
     association :position, :factory => :position
   end
+
+  factory :simply_hired_search_results, :class => :open_struct do
+    title 'title'
+    url 'http://jobsite.com'
+    description 'job description'
+    post_date '12/12/2011'
+    source 'some company'
+    city 'pittsburgh'
+    state 'pa'
+    country 'US'
+  end
 end
