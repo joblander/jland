@@ -8,12 +8,12 @@ FactoryGirl.define do
   factory :position do
     name "position_name"
     pstatus "to_apply"
-    association :user, :factory => :user
+    association :user
   end
 
   factory :related_email do
     sequence(:guid) { |n| "aaa#{n}" }
-    association :position, :factory => :position
+    association :position
   end
 
   factory :simply_hired_search_results, :class => :open_struct do
@@ -25,5 +25,11 @@ FactoryGirl.define do
     city 'pittsburgh'
     state 'pa'
     country 'US'
+  end
+
+  factory :job_search do
+    search_term 'ruby'
+    zipcode 15217
+    association :user
   end
 end

@@ -1,0 +1,131 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.simplyhired.com/a/jobs-api/xml-v2/l-15217/q-ruby?cflg=r&clip=74.94.200.198&jbd=joblander.jobamatic.com&pshid=41106&ssty=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 15 Mar 2012 18:44:14 GMT
+      Content-Type:
+      - text/xml;charset=ISO-8859-1
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=20
+      Vary:
+      - Host
+      Set-Cookie:
+      - gc=1; expires=Fri, 16-Mar-2012 18:44:13 GMT; path=/
+      - shmk=deleted; expires=Wed, 16-Mar-2011 18:44:13 GMT; path=/
+      - shup=fvt%3D4f62387d%26ncs%3D1%26lst%3D4f62387e; expires=Sat, 14-Apr-2012 18:44:14
+        GMT; path=/
+      - shut=deleted; expires=Wed, 16-Mar-2011 18:44:13 GMT; path=/; domain=.simplyhired.com
+      Cache-Control:
+      - no-cache, must-revalidate
+      P3p:
+      - CP="CAO DSP COR CURa ADMa DEVa TAIa OUR BUS IND UNI COM NAV INT"
+      Content-Length:
+      - '7302'
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" standalone=\"no\" ?>\n<!DOCTYPE
+        shrs SYSTEM \"http://api.simplyhired.com/c/jobs-api/html/sr2.dtd\">\n\n<shrs>\n<rq
+        url=\"http://api.simplyhired.com/a/jobs-api/xml_v2/q-ruby/l-15217\">\n  <t>Ruby
+        Jobs - Pittsburgh, PA 15217</t>\n  <dt>2012-03-15T18:44:13Z</dt>\n  <si>0</si>\n
+        \ <rpd>10</rpd>\n  <tr>104</tr>\n  <tv>95</tv>\n  <em url=\"\"/>\n<h>\n  <kw
+        pos=\"1\"/>\n</h>\n</rq>\n<rs>\n<r>\n  <jt>Ruby on Rails Developer</jt>\n
+        \ <cn url=\"\">Intermedix</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTUgMTE6NDQ6MTMmcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTMxOTY3JmNfaWQ9MTM0MTMmY3BjPTAuMSZwb3M9MSZoYXNoPTMzYzc1YzA3ZGEwNjYxYjdjODQyZTM2NGM2MjhiNTNl%3Bf557170b23c500b2dfecb7476033af89/jobkey-14831.619204/pub_id-41106/cjp-0\">Dice</src>\n
+        \ <ty>sponsored</ty>\n  <loc cty=\"Pittsburgh\" st=\"PA\" postal=\"15217\"
+        county=\"\" region=\"\" country=\"US\">Pittsburgh, PA</loc>\n  <ls>2012-03-01T12:34:00Z</ls>\n
+        \ <dp>2012-03-01T12:34:00Z</dp>\n  <e>across the United States to provide
+        leading technology Ruby on Rails and Application Service Provider (ASP) based
+        ... ManagementOperations or Healthcare a plus Technical Skills Ruby on Rails
+        Javascript Ajax and familiarity with...</e>\n</r>\n<r>\n  <jt>Ruby Developer,
+        ROR Developer, Rails Developer, RSPec, Agile, UI</jt>\n  <cn url=\"\">Cybercoders</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/jobkey-5934.5bd89a6fadb98f716b00d59b45c184f6/cjp-1/hits-104?aff_id=41106\">Dice</src>\n
+        \ <ty>organic</ty>\n  <loc cty=\"Fox Chapel\" st=\"PA\" postal=\"15238\" county=\"\"
+        region=\"\" country=\"US\">Fox Chapel, PA</loc>\n  <ls>2012-03-12T21:38:40Z</ls>\n
+        \ <dp>2012-03-12T21:38:40Z</dp>\n  <e>Minimum Required Skills Ruby Ruby on
+        Rails UI Agile RSpec XHTML CSS Javascript Linux or OS X Git Ruby Developer
+        ROR ... Ruby or Ruby on Rails development Detailed knowledge of Ruby and Ruby
+        on Rails (even school projects will be...</e>\n</r>\n<r>\n  <jt>Software Engineer,
+        Ruby on Rails</jt>\n  <cn url=\"\">R &amp; R Staffing</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/jobkey-14828.job45149/cjp-2/hits-104?aff_id=41106\">BullhornReach.com</src>\n
+        \ <ty>organic</ty>\n  <loc cty=\"Pittsburgh\" st=\"PA\" postal=\"15240\" county=\"\"
+        region=\"\" country=\"US\">Pittsburgh, PA</loc>\n  <ls>2012-02-04T03:31:06Z</ls>\n
+        \ <dp>2012-02-04T03:31:06Z</dp>\n  <e>Sr. Software Engineer | Ruby on Rails,
+        JAVA Job ID: JARMCP-072411 Build software for a quickly growing business.
+        You'll ... platforms extremely fast * Experinced with the following: Ruby
+        on Rails, python, Java, R, PHP, MySQL, Javascript,...</e>\n</r>\n<r>\n  <jt>Associate
+        Engagement Lead, Ruby on Rails (RoR) / Samasource</jt>\n  <cn url=\"\">Development
+        Solutions Organization</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/jobkey-5235.f1f45c029b82db38407413ecb8e1ccd0/cjp-3/hits-104?aff_id=41106\">Development
+        Solutions Organization</src>\n  <ty>organic</ty>\n  <loc cty=\"Pittsburgh\"
+        st=\"PA\" postal=\"15240\" county=\"\" region=\"\" country=\"US\">Pittsburgh,
+        PA</loc>\n  <ls>2012-01-31T18:39:14Z</ls>\n  <dp>2012-01-31T18:39:14Z</dp>\n
+        \ <e>preferably at atop and demanding employer. * 1-2 years of Ruby on Rails
+        experience, or other MVC framework. * 1-2 years of international development
+        (ID) experience or deep interest in the realm (including reading, coursework,
+        and...</e>\n</r>\n<r>\n  <jt>Ruby on Rails Engineer</jt>\n  <cn url=\"\">Healthism</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/jobkey-9242.4410-1/cjp-4/hits-104?aff_id=41106\">Startuply
+        | Startup Jobs</src>\n  <ty>organic</ty>\n  <loc cty=\"Pittsburgh\" st=\"PA\"
+        postal=\"15240\" county=\"\" region=\"\" country=\"US\">Pittsburgh, PA</loc>\n
+        \ <ls>2012-01-09T08:47:37Z</ls>\n  <dp>2012-01-09T08:47:37Z</dp>\n  <e>Hit
+        the ground running with Ruby on Rails development to make our dream product
+        into a reality Tracking time/work for ou ... (truly) with leadership skills
+        and passion for technology Ruby on Rails Strength in jQuery and AJAX Working
+        knowledge...</e>\n</r>\n<r>\n  <jt>Ruby on Rails ( Backend )Developer</jt>\n
+        \ <cn url=\"\">Leftright Studios</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/jobkey-9242.1332-3/cjp-5/hits-104?aff_id=41106\">Startuply
+        | Startup Jobs</src>\n  <ty>organic</ty>\n  <loc cty=\"Pittsburgh\" st=\"PA\"
+        postal=\"15203\" county=\"\" region=\"\" country=\"US\">Pittsburgh, PA</loc>\n
+        \ <ls>2011-11-26T20:53:58Z</ls>\n  <dp>2011-11-26T20:53:58Z</dp>\n  <e>and
+        flexible. The ideal candidate should have extensive Ruby on Rails experience
+        with a strong background in large ... can pick these up fast, yes! uber fast,
+        we're a startup: 1) Ruby on Rails, MySQL, MongoDB, Redis, NodejS, HTML/CSS
+        2)...</e>\n</r>\n<r>\n  <jt>Ruby on Rails Developer</jt>\n  <cn url=\"\">Cybercoders</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/jobkey-8395.AK-RORinPA_1/cjp-6/hits-104?aff_id=41106\">CyberCoders</src>\n
+        \ <ty>organic</ty>\n  <loc cty=\"Penn Hills\" st=\"PA\" postal=\"15235\" county=\"\"
+        region=\"\" country=\"US\">Penn Hills, PA</loc>\n  <ls>2012-03-15T16:21:25Z</ls>\n
+        \ <dp>2012-01-13T13:24:48Z</dp>\n  <e>RSPec, Agile, UI, Cucumber, Javascript,
+        HTML, Git Ruby, Ruby on Rails, UI, Agile, RSpec, XHTML, CSS, ... Ruby or Ruby
+        on Rails development * Detailed knowledge of Ruby and Ruby on Rails (even
+        school projects will be...</e>\n</r>\n<r>\n  <jt>Rails / Ruby Server Software
+        Intern (Summer and Fall)</jt>\n  <cn url=\"\">Leftright Studios</cn>\n  <src
+        url=\"http://api.simplyhired.com/a/job-details/view/jobkey-9242.1332-1/cjp-7/hits-104?aff_id=41106\">Startuply
+        | Startup Jobs</src>\n  <ty>organic</ty>\n  <loc cty=\"Pittsburgh\" st=\"PA\"
+        postal=\"15203\" county=\"\" region=\"\" country=\"US\">Pittsburgh, PA</loc>\n
+        \ <ls>2012-02-03T12:46:36Z</ls>\n  <dp>2012-02-03T12:46:36Z</dp>\n  <e>loves
+        working with new web technologies, mobile application development (iPhone)
+        and has great energy. Willing and quick to pick up a new programming language,
+        platform or technology. Paid/ Stripends       Ruby, Web, HTML, CSS, MySQL,...</e>\n</r>\n<r>\n
+        \ <jt>Software Development Engineer</jt>\n  <cn url=\"\">Innovation Works</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/jobkey-10775.2012-03-15_job_20110907201023_672/cjp-8/hits-104?aff_id=41106\">Innovation
+        Works, Inc.</src>\n  <ty>organic</ty>\n  <loc cty=\"Pittsburgh\" st=\"PA\"
+        postal=\"15219\" county=\"\" region=\"\" country=\"US\">Pittsburgh, PA</loc>\n
+        \ <ls>2012-03-15T06:32:57Z</ls>\n  <dp>2012-03-15T06:32:57Z</dp>\n  <e>development
+        engineer who has demonstrated success in Ruby on Rails and jQuery. Candidates
+        with Python expertise instead may also be considered. Candidates must have
+        a very strong foundation in programming and past projects in web applicant...</e>\n</r>\n<r>\n
+        \ <jt>Dev Ops / Site Reliability Engineer</jt>\n  <cn url=\"\">Pikimal</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/jobkey-10775.2012-03-15_job_20120228174927_7YQ/cjp-9/hits-104?aff_id=41106\">Pikimal</src>\n
+        \ <ty>organic</ty>\n  <loc cty=\"Pittsburgh\" st=\"PA\" postal=\"15212\" county=\"\"
+        region=\"\" country=\"US\">Pittsburgh, PA</loc>\n  <ls>2012-03-15T06:31:42Z</ls>\n
+        \ <dp>2012-03-15T06:31:42Z</dp>\n  <e>s Improving site reliability Assisting
+        in Quality Assurance Requirements: Proficiency with Linux and Mac OS X Working
+        knowledge of Git Working knowledge of a programming language like ruby, python,
+        perl Experience with nginx, apache, or...</e>\n</r>\n</rs>\n<pjl>\n</pjl>\n</shrs>\n"
+    http_version: 
+  recorded_at: Thu, 15 Mar 2012 18:44:14 GMT
+recorded_with: VCR 2.0.0
