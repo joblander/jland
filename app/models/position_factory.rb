@@ -9,7 +9,7 @@ class PositionFactory
       position.state  = struct.state
       position.country  = struct.country
       position.details = struct.description
-      position.post_date = struct.post_date
+      position.post_date = Time.parse(struct.post_date) if struct.post_date
     end
   end
 end
