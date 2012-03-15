@@ -31,7 +31,7 @@ describe "PositionsApis" do
       @position1.user.id.should == @position2.user.id
       get "/users/#{@user.id}/positions.json"
 
-      res = ActiveSupport::JSON.decode(response.body).sort{|a,b| b['created_at'] <=> a['created_at']}
+      res = ActiveSupport::JSON.decode(response.body).sort{|a,b| b['name'] <=> a['name']}
       res[1]['name'].should == @position1.name
       res[1]['source'].should == @position1.source
       res[1]['user_id'].should == @position1.user.id

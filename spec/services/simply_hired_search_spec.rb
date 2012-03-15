@@ -8,11 +8,19 @@ describe SimplyHiredSearch do
       SimplyHiredSearch.search('fasdfasdfad').should be_empty
     end
   end
+
   it "returns many results for a general term such as 'java'" do
     VCR.use_cassette('java', :record => :new_episodes) do
       SimplyHiredSearch.search('java').should_not be_empty
     end
   end
+
+  it "returns many results for a general term with spaces " do
+    VCR.use_cassette('ruby on rails', :record => :new_episodes) do
+      SimplyHiredSearch.search('ruby on rails').should_not be_empty
+    end
+  end
+
   it "fetches all interesting fields for positions" do
     VCR.use_cassette('ruby', :record => :new_episodes) do
       pos = SimplyHiredSearch.search('ruby').first

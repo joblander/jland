@@ -2,6 +2,7 @@ class SimplyHiredSearch
   require 'open-uri'
   require 'nokogiri'
   require 'ostruct'
+  require 'uri'
 
   API_URL_BASE = "http://api.simplyhired.com/a/jobs-api/xml-v2/".freeze
   API_LOCATION = "l-LOCATION".freeze
@@ -13,7 +14,7 @@ class SimplyHiredSearch
     url << API_URL_BASE
     url << API_LOCATION.sub('LOCATION', options[:zipcode]) << '/' if options[:zipcode]
     url << API_QUERY.sub('SEARCH_TERM', term) << API_REST
-    doc = Nokogiri::XML(open(url))
+    doc = Nokogiri::XML(open(URI.escape(url)))
     positions = doc.xpath('//r').collect do |node|
 
       position = OpenStruct.new

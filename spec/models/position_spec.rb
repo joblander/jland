@@ -16,6 +16,10 @@
 #  app_link       :text
 #  app_due_date   :datetime
 #  starred        :boolean         default(FALSE), not null
+#  city           :string(255)
+#  state          :string(255)
+#  country        :string(255)
+#  post_date      :datetime
 #
 
 require 'spec_helper'
