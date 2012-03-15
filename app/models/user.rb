@@ -18,4 +18,11 @@ class User < ActiveRecord::Base
   validates_presence_of :password, :on => :create
   validates_uniqueness_of :email
 
+  after_create :create_job_search
+
+  private
+
+  def create_job_search
+    self.job_search = JobSearch.new
+  end
 end

@@ -14,4 +14,9 @@
 require 'spec_helper'
 
 describe User do
+  it "creates a new job search for new users" do
+    user = User.create!(:email => 'joe@example.com', :password => 'pass', :password_digest => 'dafdsfas')
+    user.job_search.should_not be_nil
+    user.job_search.user.should == user
+  end
 end
