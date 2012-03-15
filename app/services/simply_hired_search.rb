@@ -3,10 +3,17 @@ class SimplyHiredSearch
   require 'nokogiri'
   require 'ostruct'
 
-  API_TEMPLATE = "http://api.simplyhired.com/a/jobs-api/xml-v2/q-SEARCH_TERM?pshid=41106&ssty=2&cflg=r&jbd=joblander.jobamatic.com&clip=74.94.200.198"
+  API_URL_BASE = "http://api.simplyhired.com/a/jobs-api/xml-v2/".freeze
+  API_LOCATION = "l-LOCATION".freeze
+  API_QUERY = "q-SEARCH_TERM".freeze
+  API_REST = "?pshid=41106&ssty=2&cflg=r&jbd=joblander.jobamatic.com&clip=74.94.200.198".freeze
 
-  def self.search(term)
-    doc = Nokogiri::XML(open(API_TEMPLATE.sub('SEARCH_TERM', term)))
+  def self.search(term, options = {})
+    url = ''
+    url << API_URL_BASE
+    url << API_LOCATION.sub('LOCATION', options[:zipcode]) << '/' if options[:zipcode]
+    url << API_QUERY.sub('SEARCH_TERM', term) << API_REST
+    doc = Nokogiri::XML(open(url))
     positions = doc.xpath('//r').collect do |node|
 
       position = OpenStruct.new

@@ -127,4 +127,98 @@ http_interactions:
         a core contributor to the development and implementation of a robust platform...</e>\n</r>\n</rs>\n<pjl>\n</pjl>\n</shrs>\n"
     http_version: 
   recorded_at: Tue, 13 Mar 2012 17:09:40 GMT
+- request:
+    method: get
+    uri: http://api.simplyhired.com/a/jobs-api/xml-v2/q-ruby?cflg=r&clip=74.94.200.198&jbd=joblander.jobamatic.com&l=ZIPCODE&pshid=41106&ssty=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 13 Mar 2012 18:51:37 GMT
+      Content-Type:
+      - text/xml;charset=ISO-8859-1
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=20
+      Vary:
+      - Host
+      Set-Cookie:
+      - gc=1; expires=Wed, 14-Mar-2012 18:51:37 GMT; path=/
+      - shmk=deleted; expires=Mon, 14-Mar-2011 18:51:36 GMT; path=/
+      - shup=fvt%3D4f5f9739; expires=Thu, 12-Apr-2012 18:51:37 GMT; path=/
+      - shut=deleted; expires=Mon, 14-Mar-2011 18:51:36 GMT; path=/; domain=.simplyhired.com
+      Cache-Control:
+      - no-cache, must-revalidate
+      P3p:
+      - CP="CAO DSP COR CURa ADMa DEVa TAIa OUR BUS IND UNI COM NAV INT"
+      Content-Length:
+      - '282'
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" standalone=\"no\" ?>\n<!DOCTYPE
+        shrs SYSTEM \"http://api.simplyhired.com/c/jobs-api/html/sr2.dtd\">\n\n<sherror>\n
+        \ <error type=\"noresults\" code=\"1.1\">\n  <title></title>\n  <subtitle></subtitle>\n
+        \ <text></text>\n  <base></base>\n </error>\n</sherror>\n "
+    http_version: 
+  recorded_at: Tue, 13 Mar 2012 18:51:37 GMT
+- request:
+    method: get
+    uri: http://api.simplyhired.com/a/jobs-api/xml-v2/q-fasdfasdfad?cflg=r&clip=74.94.200.198&jbd=joblander.jobamatic.com&pshid=41106&ssty=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 15 Mar 2012 00:01:43 GMT
+      Content-Type:
+      - text/xml;charset=ISO-8859-1
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=20
+      Vary:
+      - Host
+      Set-Cookie:
+      - gc=1; expires=Fri, 16-Mar-2012 00:01:43 GMT; path=/
+      - shmk=deleted; expires=Wed, 16-Mar-2011 00:01:42 GMT; path=/
+      - shup=fvt%3D4f613167; expires=Sat, 14-Apr-2012 00:01:43 GMT; path=/
+      - shut=deleted; expires=Wed, 16-Mar-2011 00:01:42 GMT; path=/; domain=.simplyhired.com
+      Cache-Control:
+      - no-cache, must-revalidate
+      P3p:
+      - CP="CAO DSP COR CURa ADMa DEVa TAIa OUR BUS IND UNI COM NAV INT"
+      Content-Length:
+      - '283'
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" standalone=\"no\" ?>\n<!DOCTYPE
+        shrs SYSTEM \"http://api.simplyhired.com/c/jobs-api/html/sr2.dtd\">\n\n <sherror>\n
+        \ <error type=\"invalidparam\" code=\"\">\n  <title></title>\n  <subtitle></subtitle>\n
+        \ <text></text>\n  <base></base>\n </error>\n</sherror>\n "
+    http_version: 
+  recorded_at: Thu, 15 Mar 2012 00:01:43 GMT
 recorded_with: VCR 2.0.0
