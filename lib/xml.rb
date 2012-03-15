@@ -32,3 +32,15 @@ Combat Engineer - Construction and Engineering Specialist
 We're looking for team players to provide construction and engineering support vital to the successful outcome of Army ... including construction, building inspection, and building engineering. Earn while you learn Get paid to learn! Join...
 </e>
 </r>
+
+position = Position.new do |position|
+  position.title = node.xpath("jt").text
+  position.app_link = node.xpath("src/@url").text
+  position.source  = node.xpath("src").text
+  position.company = node.xpath("src").text
+  position.city  = node.xpath("loc/@cty").text
+  position.state  = node.xpath("loc/@st").text
+  position.country  = node.xpath("loc/@country").text
+  position.details = node.xpath("e").text
+  position.post_date = node.xpath("dp").text
+end

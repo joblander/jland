@@ -15,6 +15,7 @@
 #  comments       :text
 #  app_link       :text
 #  app_due_date   :datetime
+#  starred        :boolean         default(FALSE), not null
 #
 
 require 'spec_helper'
