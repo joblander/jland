@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20120315183240) do
 
   create_table "job_searches", :force => true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",     :null => false
     t.string   "search_term"
     t.integer  "zipcode"
     t.datetime "created_at",  :null => false
