@@ -21,6 +21,12 @@ describe SimplyHiredSearch do
     end
   end
 
+  it "returns many results for an empty search term with a location " do
+    VCR.use_cassette('empty-search-term', :record => :new_episodes) do
+      SimplyHiredSearch.search('', :zipcode => '15217').should_not be_empty
+    end
+  end
+
   it "fetches all interesting fields for positions" do
     VCR.use_cassette('ruby', :record => :new_episodes) do
       pos = SimplyHiredSearch.search('ruby').first

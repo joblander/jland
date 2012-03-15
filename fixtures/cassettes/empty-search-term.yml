@@ -1,0 +1,130 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.simplyhired.com/a/jobs-api/xml-v2/l-15217/q-?cflg=r&clip=74.94.200.198&jbd=joblander.jobamatic.com&pshid=41106&ssty=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 15 Mar 2012 18:48:32 GMT
+      Content-Type:
+      - text/xml;charset=ISO-8859-1
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=20
+      Vary:
+      - Host
+      Set-Cookie:
+      - gc=1; expires=Fri, 16-Mar-2012 18:48:32 GMT; path=/
+      - shmk=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+      - shup=fvt%3D4f623980%26ncs%3D1%26lst%3D4f623980; expires=Sat, 14-Apr-2012 18:48:32
+        GMT; path=/
+      - shut=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.simplyhired.com
+      Cache-Control:
+      - no-cache, must-revalidate
+      P3p:
+      - CP="CAO DSP COR CURa ADMa DEVa TAIa OUR BUS IND UNI COM NAV INT"
+      Content-Length:
+      - '9597'
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" standalone=\"no\" ?>\n<!DOCTYPE
+        shrs SYSTEM \"http://api.simplyhired.com/c/jobs-api/html/sr2.dtd\">\n\n<shrs>\n<rq
+        url=\"http://api.simplyhired.com/a/jobs-api/xml_v2/l-15217\">\n  <t>Pittsburgh,
+        PA 15217 Jobs</t>\n  <dt>2012-03-15T18:48:32Z</dt>\n  <si>0</si>\n  <rpd>10</rpd>\n
+        \ <tr>32355</tr>\n  <tv>1000</tv>\n  <em url=\"\"/>\n<h>\n  <kw pos=\"1\"/>\n</h>\n</rq>\n<rs>\n<r>\n
+        \ <jt>Truck Driver</jt>\n  <cn url=\"\">Army National Guard</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTUgMTE6NDg6MzImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTE3MjgxJmNfaWQ9MTM3MTYmY3BjPTIuMDEmcG9zPTEmaGFzaD05MmQ5MWU2N2UxYzk1MGI5NDU5ZTZiZDc5ODA0MzU1Mg%3D%3D%3B6d4fdec6b39ec57aff4a554221437c91/jobkey-c2f4be83d3698df6d68db81b03465c2520b4f/pub_id-41106/cjp-0\">Army
+        National Guard</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Pittsburgh\" st=\"PA\"
+        postal=\"15206\" county=\"\" region=\"\" country=\"US\">Pittsburgh, PA</loc>\n
+        \ <ls>2012-03-14T14:51:28Z</ls>\n  <dp>2012-03-14T14:51:28Z</dp>\n  <e>Keep
+        the Nation moving forward in the Army National Guard. In the Guard, the Truck
+        Driver is the Soldier who makes sure other Soldiers and their supplies get
+        where they need to go, either by supervising the transportation team or by...</e>\n</r>\n<r>\n
+        \ <jt>Counselor/Addiction Specialist</jt>\n  <cn url=\"\">Tadiso</cn>\n  <src
+        url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTUgMTE6NDg6MzImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTIzMDQ3JmNfaWQ9MTA3NDcmY3BjPTIuMDAmcG9zPTImaGFzaD05YjdjMTMyZjNiMGM3Yzg5MjJiZTM5ODliNTExYzQzMw%3D%3D%3Bc1cd9cf9b772caca505b41ef77b5dc17/jobkey-6256.660712/pub_id-41106/cjp-1\">Tadiso,
+        Inc.</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Pittsburgh\" st=\"PA\" postal=\"15233\"
+        county=\"\" region=\"\" country=\"US\">Pittsburgh, PA</loc>\n  <ls>2012-02-28T17:54:37Z</ls>\n
+        \ <dp>2012-02-28T17:54:37Z</dp>\n  <e>Methadone treatment facility. Clinical
+        exp. 1 - 2 yrs. BA/MA in related field. Starting 30,000. Excellent benefits.
+        Send resume to Tadiso, Inc. 1425 Beaver Ave, Pgh, PA 15233 or fax resume to
+        Tadiso, Inc. 412-316-1019.</e>\n</r>\n<r>\n  <jt>Health Care Specialist</jt>\n
+        \ <cn url=\"\">Army National Guard</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTUgMTE6NDg6MzImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTE3MjgxJmNfaWQ9MTM3MTYmY3BjPTIuMDEmcG9zPTMmaGFzaD05MmQ5MWU2N2UxYzk1MGI5NDU5ZTZiZDc5ODA0MzU1Mg%3D%3D%3Bfa4d5dd2e6d90c8234f00bd898f00838/jobkey-218487eff454a1aecf61b94b65a2c7d0984eb5/pub_id-41106/cjp-2\">Army
+        National Guard</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Pittsburgh\" st=\"PA\"
+        postal=\"15206\" county=\"\" region=\"\" country=\"US\">Pittsburgh, PA</loc>\n
+        \ <ls>2012-03-14T12:05:03Z</ls>\n  <dp>2012-03-14T12:05:03Z</dp>\n  <e>Dreaming
+        of a health care career? As a National Guard Health Care Specialist, you will
+        address the health care needs of civilians after natural disasters or civil
+        emergencies. You will also be the first line of defense against injuries and...</e>\n</r>\n<r>\n
+        \ <jt>Machinist</jt>\n  <cn url=\"\">Army National Guard</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTUgMTE6NDg6MzImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTE3MjgxJmNfaWQ9MTM3MTYmY3BjPTIuMDEmcG9zPTQmaGFzaD05MmQ5MWU2N2UxYzk1MGI5NDU5ZTZiZDc5ODA0MzU1Mg%3D%3D%3Bcd343fdd4eb1068459c77aef6dd5aa29/jobkey-1a771c50c9ee28cf54d0591a8d91a9bfbc1737b/pub_id-41106/cjp-3\">Army
+        National Guard</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Pittsburgh\" st=\"PA\"
+        postal=\"15206\" county=\"\" region=\"\" country=\"US\">Pittsburgh, PA</loc>\n
+        \ <ls>2012-03-14T11:39:40Z</ls>\n  <dp>2012-03-14T11:39:40Z</dp>\n  <e>Army
+        National Guard Machinists provide the critical knowledge, expertise, and skills
+        needed to repair broken parts, modify old ones, or fabricate replacements
+        for all equipment. They achieve this by operating lathes, drill presses,...</e>\n</r>\n<r>\n
+        \ <jt>Special Electronic Devices Repairer</jt>\n  <cn url=\"\">Army National
+        Guard</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTUgMTE6NDg6MzImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTE3MjgxJmNfaWQ9MTM3MTYmY3BjPTIuMDEmcG9zPTUmaGFzaD05MmQ5MWU2N2UxYzk1MGI5NDU5ZTZiZDc5ODA0MzU1Mg%3D%3D%3B87bac804d27d356a741c1f54625dd956/jobkey-2fc294dd340e590fc49af261802f22c593e6/pub_id-41106/cjp-4\">Army
+        National Guard</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Pittsburgh\" st=\"PA\"
+        postal=\"15216\" county=\"\" region=\"\" country=\"US\">Pittsburgh, PA</loc>\n
+        \ <ls>2012-03-14T11:12:32Z</ls>\n  <dp>2012-03-14T11:12:32Z</dp>\n  <e>The
+        Army National Guard relies on electronic devices in areas ranging from weather
+        forecasting to combat. As a Special Electronic Devices Repairer, you will
+        ensure that night vision equipment; electronic distance and azimuth-orienting...</e>\n</r>\n<r>\n
+        \ <jt>Light-Wheel Vehicle Mechanic</jt>\n  <cn url=\"\">Army National Guard</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTUgMTE6NDg6MzImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTE3MjgxJmNfaWQ9MTM3MTYmY3BjPTIuMDEmcG9zPTYmaGFzaD05MmQ5MWU2N2UxYzk1MGI5NDU5ZTZiZDc5ODA0MzU1Mg%3D%3D%3B0a17206cddb3831ac1af945773024d71/jobkey-f4385068d2da54ac432dc74ac594df035461396/pub_id-41106/cjp-5\">Army
+        National Guard</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Pittsburgh\" st=\"PA\"
+        postal=\"15216\" county=\"\" region=\"\" country=\"US\">Pittsburgh, PA</loc>\n
+        \ <ls>2012-03-09T17:46:32Z</ls>\n  <dp>2012-03-09T17:46:32Z</dp>\n  <e>Got
+        a knack for keeping cars and trucks on the road? Then join the Army National
+        Guard as a Light-Wheel Vehicle Mechanic and help keep freedom moving forward.
+        As a Light-Wheel Vehicle Mechanic, you will have the opportunity to supervise...</e>\n</r>\n<r>\n
+        \ <jt>Food Service Specialist</jt>\n  <cn url=\"\">Army National Guard</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTUgMTE6NDg6MzImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTE3MjgxJmNfaWQ9MTM3MTYmY3BjPTIuMDEmcG9zPTcmaGFzaD05MmQ5MWU2N2UxYzk1MGI5NDU5ZTZiZDc5ODA0MzU1Mg%3D%3D%3B19a7acdf20d1433621c2a3921a85e1fc/jobkey-9ec95c47c4cdf859da6bd4244225b1d35ec6c463/pub_id-41106/cjp-6\">Army
+        National Guard</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Pittsburgh\" st=\"PA\"
+        postal=\"15206\" county=\"\" region=\"\" country=\"US\">Pittsburgh, PA</loc>\n
+        \ <ls>2012-03-09T16:23:21Z</ls>\n  <dp>2012-03-09T16:23:21Z</dp>\n  <e>It's
+        said that an army marches on its stomach. If that's the case, you can be the
+        Soldier who keeps the Army National Guard marching on. In the Army National
+        Guard, the Food Service Specialist takes care of the dietary and nutritional...</e>\n</r>\n<r>\n
+        \ <jt>Fire Support Specialist</jt>\n  <cn url=\"\">Army National Guard</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTUgMTE6NDg6MzImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTE3MjgxJmNfaWQ9MTM3MTYmY3BjPTIuMDEmcG9zPTgmaGFzaD05MmQ5MWU2N2UxYzk1MGI5NDU5ZTZiZDc5ODA0MzU1Mg%3D%3D%3B1aa92d9ab6ac678ff9f5328783ffc496/jobkey-ad9615a99843383c512ca68c6140e6cb5cd36028/pub_id-41106/cjp-7\">Army
+        National Guard</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Washington\" st=\"PA\"
+        postal=\"15301\" county=\"\" region=\"\" country=\"US\">Washington, PA</loc>\n
+        \ <ls>2012-03-02T13:22:03Z</ls>\n  <dp>2012-03-02T13:22:03Z</dp>\n  <e>Join
+        the Army National Guard as a Fire Support Specialist and you'll find out just
+        how exciting computers and communications can be. As part of an elite field
+        artillery team, you will support infantry and tank units in combat operations...</e>\n</r>\n<r>\n
+        \ <jt>Automated Logistical Specialist - Supply Chain</jt>\n  <cn url=\"\">Army
+        National Guard</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTUgMTE6NDg6MzImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTE3MjgxJmNfaWQ9MTM3MTYmY3BjPTIuMDEmcG9zPTkmaGFzaD05MmQ5MWU2N2UxYzk1MGI5NDU5ZTZiZDc5ODA0MzU1Mg%3D%3D%3B218e90885c2e9aa2ee2433e1382671f1/jobkey-4ce021095321c2b543bf4c5de1e68757ddb77d/pub_id-41106/cjp-8\">Army
+        National Guard</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Ford City\" st=\"PA\"
+        postal=\"16226\" county=\"\" region=\"\" country=\"US\">Ford City, PA</loc>\n
+        \ <ls>2012-03-02T02:08:36Z</ls>\n  <dp>2012-03-02T02:08:36Z</dp>\n  <e>As
+        an Automated Logistical Specialist in the Army National Guard, you will learn
+        the ins and outs of supply chain management, from storage and distribution
+        to warehouse management and record keeping. Major duties include: * Establishing...</e>\n</r>\n<r>\n
+        \ <jt>Unit Supply Specialist - Warehouse Manager</jt>\n  <cn url=\"\">Army
+        National Guard</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTUgMTE6NDg6MzImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTE3MjgxJmNfaWQ9MTM3MTYmY3BjPTIuMDEmcG9zPTEwJmhhc2g9OTJkOTFlNjdlMWM5NTBiOTQ1OWU2YmQ3OTgwNDM1NTI%3D%3Be9c051e7e7e029e68fb6c3fbdb21e7bc/jobkey-71bf81c9f10608ae3b620f29013f5a57de6210/pub_id-41106/cjp-9\">Army
+        National Guard</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Mount Pleasant\"
+        st=\"PA\" postal=\"15666\" county=\"\" region=\"\" country=\"US\">Mount Pleasant,
+        PA</loc>\n  <ls>2012-03-02T02:07:53Z</ls>\n  <dp>2012-03-02T02:07:53Z</dp>\n
+        \ <e>Army National Guard Unit Supply Specialists make sure the unit and fellow
+        Soldiers have what they need when they need it. In this role, your keen eye
+        and management ability will keep warehouse functions running smoothly and
+        keep the Guard...</e>\n</r>\n</rs>\n<pjl>\n</pjl>\n</shrs>\n"
+    http_version: 
+  recorded_at: Thu, 15 Mar 2012 18:48:32 GMT
+recorded_with: VCR 2.0.0
