@@ -1,5 +1,7 @@
 require 'spec_helper'
 require 'json'
+require 'vcr'
+require 'vcr_helper'
 
 describe "PositionsApis" do
 
@@ -56,6 +58,19 @@ describe "PositionsApis" do
 
       res = ActiveSupport::JSON.decode(response.body)
       response.status.should == 404
+    end
+
+    it "gets many positions for a search term and a location" do
+      VCR.use_cassette('to_review_positions', :record => :new_episodes) do
+        user = FactoryGirl.create(:user)
+        user.job_search.update_attributes(:search_term => 'ruby', :zipcode => '15217')
+        get "/users/#{user.id}/positions.json", :pstatus => 'to_review'
+
+        res = ActiveSupport::JSON.decode(response.body)
+        res.should_not be_empty
+        res.each{|position| position['pstatus'].should == 'to_review'}
+        response.status.should == 200
+      end
     end
   end
 

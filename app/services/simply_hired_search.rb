@@ -9,7 +9,8 @@ class SimplyHiredSearch
   API_QUERY = "q-SEARCH_TERM".freeze
   API_REST = "?pshid=41106&ssty=2&cflg=r&jbd=joblander.jobamatic.com&clip=74.94.200.198".freeze
 
-  def self.search(term, options = {})
+  def self.search(term = '', options = {})
+    raise ArgumentError unless term
     url = ''
     url << API_URL_BASE
     url << API_LOCATION.sub('LOCATION', options[:zipcode]) << '/' if options[:zipcode]
