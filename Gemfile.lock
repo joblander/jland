@@ -95,7 +95,7 @@ GEM
     less (2.0.11)
       commonjs (~> 0.2.0)
       therubyracer (~> 0.9.9)
-    less-rails (2.1.7)
+    less-rails (2.1.8)
       actionpack (>= 3.1)
       less (~> 2.0.7)
     libv8 (3.3.10.4)

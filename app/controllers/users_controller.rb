@@ -11,4 +11,9 @@ class UsersController < ApplicationController
       render "new"
     end
   end
+
+  def edit
+    @user = User.find(params[:id])
+    @job_search = @user.job_search
+  end
 end

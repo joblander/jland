@@ -1,0 +1,24 @@
+<h1>Configure Job Search</h1>
+
+<%= form_for [@user, @job_search] do |f| %>
+    <% if @job_search.errors.any?%>
+
+      <div class="alert alert-error">
+        <h3>Please correct the following problems:</h2>
+        <ul>
+          <% for message in @job_search.errors.full_messages %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="field">
+      <%= f.label :search_term %>
+      <%= f.text_field :search_term %>
+    </div>
+    <div class="field">
+      <%= f.label :zipcode %>
+      <%= f.text_field :zipcode %>
+    </div>
+    <div class="actions"><%= f.submit %></div>
+<% end %>

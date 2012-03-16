@@ -3,7 +3,8 @@ Joblander::Application.routes.draw do
   get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
   root :to => "users#new"
-  resources :users, :only => :create do
+  resources :users, :only => [:create, :edit] do
+    resources :job_search, :only => :update
     resources :positions, :except => [:new, :edit] do
       resources :related_emails, :only => [:create, :destroy]
     end
@@ -68,11 +69,12 @@ Joblander::Application.routes.draw do
   # match ':controller(/:action(/:id(.:format)))'
 end
 #== Route Map
-# Generated on 08 Mar 2012 00:16
+# Generated on 16 Mar 2012 12:30
 #
 #                        login GET    /login(.:format)                                                    sessions#new
 #                       signup GET    /signup(.:format)                                                   users#new
 #                         root        /                                                                   users#new
+#              user_job_search PUT    /users/:user_id/job_search/:id(.:format)                            job_search#update
 # user_position_related_emails POST   /users/:user_id/positions/:position_id/related_emails(.:format)     related_emails#create
 #  user_position_related_email DELETE /users/:user_id/positions/:position_id/related_emails/:id(.:format) related_emails#destroy
 #               user_positions GET    /users/:user_id/positions(.:format)                                 positions#index
@@ -81,5 +83,6 @@ end
 #                              PUT    /users/:user_id/positions/:id(.:format)                             positions#update
 #                              DELETE /users/:user_id/positions/:id(.:format)                             positions#destroy
 #                        users POST   /users(.:format)                                                    users#create
+#                    edit_user GET    /users/:id/edit(.:format)                                           users#edit
 #                     sessions POST   /sessions(.:format)                                                 sessions#create
 #                      session DELETE /sessions/:id(.:format)                                             sessions#destroy
