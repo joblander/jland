@@ -1,7 +1,11 @@
 class PositionsController < ApiController
 
   def index
-    respond_with user.positions, :include => :related_emails
+    if(params[:pstatus] == 'to_review')
+      respond_with user.job_search.fetch.collect{|search_result| PositionFactory.build_from_search_results(search_result)}
+    else
+      respond_with user.positions, :include => :related_emails
+    end
   end
 
   def create
