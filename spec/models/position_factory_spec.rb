@@ -32,6 +32,7 @@ describe PositionFactory do
     position.country.should == 'US'
     position.details.should == 'job description'
     position.post_date.should == Time.parse('12/12/2011')
+    position.pstatus.should == 'to_review'
   end
 
   it "does not create a position from search results of non optional fields are missing" do
