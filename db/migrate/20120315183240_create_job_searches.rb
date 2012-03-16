@@ -1,5 +1,5 @@
 class CreateJobSearches < ActiveRecord::Migration
-  def change
+  def up
     create_table :job_searches do |t|
       t.integer :user_id, :null => false
       t.string :search_term
@@ -7,5 +7,11 @@ class CreateJobSearches < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    User.all.each{|u| u.send(:create_job_search)}
+  end
+
+  def down
+    drop_table :job_searches
   end
 end
