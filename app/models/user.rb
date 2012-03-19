@@ -20,6 +20,14 @@ class User < ActiveRecord::Base
 
   after_create :create_job_search
 
+  def fetch_positions(pstatus)
+    if pstatus == 'to_review'
+      self.job_search.fetch.collect{|search_result| PositionFactory.build_from_search_results(search_result)}
+    else
+      Array(self.positions.find_by_pstatus(pstatus))
+    end
+  end
+
   private
 
   def create_job_search

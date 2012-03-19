@@ -28,6 +28,20 @@ describe "PositionsApis" do
       response.status.should == 200
     end
 
+    it "gets all positions for a user when pstatus is specified" do
+      position = Factory(:position, :pstatus => 'to_apply')
+      get "/users/#{position.user_id}/positions.json", :pstatus => 'to_apply'
+      res = ActiveSupport::JSON.decode(response.body)
+      res.size.should == 1
+    end
+
+    it "gets no positions for a user when the positions don't have the requested pstatus" do
+      position = Factory(:position, :pstatus => 'interviewed')
+      get "/users/#{position.user_id}/positions.json", :pstatus => 'to_apply'
+      res = ActiveSupport::JSON.decode(response.body)
+      res.should be_empty
+    end
+
     it "gets all positions for a user when there are two positions" do
 
       @position1.user.id.should == @position2.user.id

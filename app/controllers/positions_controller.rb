@@ -1,8 +1,8 @@
 class PositionsController < ApiController
 
   def index
-    if(params[:pstatus] == 'to_review')
-      respond_with user.job_search.fetch.collect{|search_result| PositionFactory.build_from_search_results(search_result)}
+    if(params[:pstatus])
+      respond_with user.fetch_positions(params[:pstatus]), :include => :related_emails
     else
       respond_with user.positions, :include => :related_emails
     end

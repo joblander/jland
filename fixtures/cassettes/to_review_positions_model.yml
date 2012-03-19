@@ -1,0 +1,302 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.simplyhired.com/a/jobs-api/xml-v2/q-?cflg=r&clip=74.94.200.198&jbd=joblander.jobamatic.com&pshid=41106&ssty=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 19 Mar 2012 19:15:18 GMT
+      Content-Type:
+      - text/xml;charset=ISO-8859-1
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=20
+      Vary:
+      - Host
+      Set-Cookie:
+      - gc=1; expires=Tue, 20-Mar-2012 19:15:17 GMT; path=/
+      - shmk=deleted; expires=Sun, 20-Mar-2011 19:15:17 GMT; path=/
+      - shup=fvt%3D4f6785c5; expires=Wed, 18-Apr-2012 19:15:18 GMT; path=/
+      - shut=deleted; expires=Sun, 20-Mar-2011 19:15:17 GMT; path=/; domain=.simplyhired.com
+      Cache-Control:
+      - no-cache, must-revalidate
+      P3p:
+      - CP="CAO DSP COR CURa ADMa DEVa TAIa OUR BUS IND UNI COM NAV INT"
+      Content-Length:
+      - '282'
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" standalone=\"no\" ?>\n<!DOCTYPE
+        shrs SYSTEM \"http://api.simplyhired.com/c/jobs-api/html/sr2.dtd\">\n\n<sherror>\n
+        \ <error type=\"noresults\" code=\"1.1\">\n  <title></title>\n  <subtitle></subtitle>\n
+        \ <text></text>\n  <base></base>\n </error>\n</sherror>\n "
+    http_version: 
+  recorded_at: Mon, 19 Mar 2012 19:15:18 GMT
+- request:
+    method: get
+    uri: http://api.simplyhired.com/a/jobs-api/xml-v2/q-java?cflg=r&clip=74.94.200.198&jbd=joblander.jobamatic.com&pshid=41106&ssty=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 19 Mar 2012 19:25:52 GMT
+      Content-Type:
+      - text/xml;charset=ISO-8859-1
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=20
+      Vary:
+      - Host
+      Set-Cookie:
+      - gc=1; expires=Tue, 20-Mar-2012 19:25:51 GMT; path=/
+      - shmk=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+      - shup=fvt%3D4f67883f%26ncs%3D1%26lst%3D4f678840; expires=Wed, 18-Apr-2012 19:25:52
+        GMT; path=/
+      - shut=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.simplyhired.com
+      Cache-Control:
+      - no-cache, must-revalidate
+      P3p:
+      - CP="CAO DSP COR CURa ADMa DEVa TAIa OUR BUS IND UNI COM NAV INT"
+      Content-Length:
+      - '9637'
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" standalone=\"no\" ?>\n<!DOCTYPE
+        shrs SYSTEM \"http://api.simplyhired.com/c/jobs-api/html/sr2.dtd\">\n\n<shrs>\n<rq
+        url=\"http://api.simplyhired.com/a/jobs-api/xml_v2/q-java\">\n  <t>Java Jobs</t>\n
+        \ <dt>2012-03-19T19:25:51Z</dt>\n  <si>0</si>\n  <rpd>10</rpd>\n  <tr>125999</tr>\n
+        \ <tv>812</tv>\n  <em url=\"\"/>\n<h>\n  <kw pos=\"1\"/>\n</h>\n</rq>\n<rs>\n<r>\n
+        \ <jt>Rockstar Senior / Sr. Java Back-End Developer</jt>\n  <cn url=\"\">Overactdev
+        Technology Partners</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTkgMTI6MjU6NTImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTIzMDQ3JmNfaWQ9MTA3NDcmY3BjPTEuNTEmcG9zPTEmaGFzaD1kZmNiNzA5ZmY5N2Y1Njk4YTNhYmQ1N2ZhNTQ5ZDU2Zg%3D%3D%3B9ddffc38047a6ab9b82f510f6ed41516/jobkey-6256.669135/rid-rid_19849026424f67883fc308d5.78541130/pub_id-41106/cjp-0\">OveractDev
+        Technology Partners</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Mountain View\"
+        st=\"CA\" postal=\"94043\" county=\"\" region=\"\" country=\"US\">Mountain
+        View, CA</loc>\n  <ls>2012-03-17T01:23:49Z</ls>\n  <dp>2012-03-17T01:23:49Z</dp>\n
+        \ <e>Silicon Valley. ----------------- keywords: Back end Core Java Spring
+        framework Struts Ajax Velocity Unix Linux Jboss ... VMWare Java 5 &amp; 6
+        JSTL Oracle ADF MyFaces XDoclet RMI Java Beans Ant Facelets AWT Swing PKI
+        security Cryptography...</e>\n</r>\n<r>\n  <jt>Java Developer / Software Engineer</jt>\n
+        \ <cn url=\"\">SRA International</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTkgMTI6MjU6NTImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTE0NjE1JmNfaWQ9MTEyMDcmY3BjPTEuNTAmcG9zPTImaGFzaD01NmEwZmRiNGVhNzA2NDYyZTBhOTdmYzI1YjE1OTViYg%3D%3D%3B0da1cd3ee8e8e154f43876d4364ad6ea/jobkey-9032f6fd4a4691c86cd133d24c92d4086eb4cf5/rid-rid_19849026424f67883fc308d5.78541130/pub_id-41106/cjp-1\">SRA
+        International</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Arlington\" st=\"VA\"
+        postal=\"22223\" county=\"\" region=\"\" country=\"US\">Arlington, VA</loc>\n
+        \ <ls>2012-03-16T00:19:40Z</ls>\n  <dp>2012-03-16T00:19:40Z</dp>\n  <e>nUnit
+        libraries. Implement functional changes with the Java programming language
+        and support integration and acceptance testing. The individual will also support
+        changes through the creation of system documentation and UML diagrams. Struts...</e>\n</r>\n<r>\n
+        \ <jt>Java Application Developer</jt>\n  <cn url=\"\">Bright Now Dental</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/jobkey-32dfd1184929d9c3c2f6d9b4e78a34bf44f90/rid-rid_19849026424f67883fc308d5.78541130/cjp-2/hits-125999?aff_id=41106\">Bright
+        Now Dental</src>\n  <ty>organic</ty>\n  <loc cty=\"Irvine\" st=\"CA\" postal=\"92650\"
+        county=\"\" region=\"\" country=\"US\">Irvine, CA</loc>\n  <ls>2012-03-15T10:01:32Z</ls>\n
+        \ <dp>2012-03-15T10:01:32Z</dp>\n  <e>experience developing n-tier web applications
+        utilizing Java and J2EE methodologies Proficiency with J2EE ... EXTJS and
+        JQuery Experience with industry leading Java Frameworks such as Spring Framework,
+        Spring MVC and...</e>\n</r>\n<r>\n  <jt>Lead Java Developer</jt>\n  <cn url=\"\">TD
+        Ameritrade</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTkgMTI6MjU6NTImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTM5MDkwJmNfaWQ9MTQ3MzImY3BjPTEuMzMmcG9zPTMmaGFzaD0xMDE4MGI3MWNjYWM0NTA3OGE2MWQzMmU1MzI4ZDkyYQ%3D%3D%3B23a29b7bc3cd71a9e347c3777e56dd5f/jobkey-8792feaf942467822cca3db15a566033afb2267d/rid-rid_19849026424f67883fc308d5.78541130/pub_id-41106/cjp-3\">TD
+        Ameritrade</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Jersey City\" st=\"NJ\"
+        postal=\"07308\" county=\"\" region=\"\" country=\"US\">Jersey City, NJ</loc>\n
+        \ <ls>2012-03-13T11:58:40Z</ls>\n  <dp>2012-03-13T11:58:25Z</dp>\n  <e>* Strong
+        understanding and coding experience in Core-Java with JVM 1.5 or higher in
+        multi-threaded environment. * ... understanding of Relational Databases preferably
+        Oracle. * Java frame works using Struts, Spring etc. * ORM...</e>\n</r>\n<r>\n
+        \ <jt>Senior Java Developer/Architect</jt>\n  <cn url=\"\">Wizni</cn>\n  <src
+        url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTkgMTI6MjU6NTImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTIzMDQ3JmNfaWQ9MTA3NDYmY3BjPTEuMDAmcG9zPTQmaGFzaD0wYjVlNTZkOTJiZDM1NTY5OTUzZjY4ZjI1NjkzMTVjOA%3D%3D%3Bea8c08a254a24ccbb90ead493d6725b1/jobkey-6256.668421/rid-rid_19849026424f67883fc308d5.78541130/pub_id-41106/cjp-4\">Wizni,
+        Inc.</src>\n  <ty>sponsored</ty>\n  <loc cty=\"San Ramon\" st=\"CA\" postal=\"94583\"
+        county=\"\" region=\"\" country=\"US\">San Ramon, CA</loc>\n  <ls>2012-03-15T20:13:43Z</ls>\n
+        \ <dp>2012-03-15T16:58:37Z</dp>\n  <e>- 5+ years experience with architecture
+        of enterprise Java/Java EE Applications - Application Server expertise: Oracle
+        ... - Enterprise Java frameworks expertise: Eclipse IDE, core Java, Spring
+        projects, Java Web Services, Java Security,...</e>\n</r>\n<r>\n  <jt>Java
+        Software Engineer 3 4</jt>\n  <cn url=\"\">Boeing</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTkgMTI6MjU6NTImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTI4MDIyJmNfaWQ9MTM2MDQmY3BjPTAuNTAmcG9zPTUmaGFzaD1lODNlNWRhNWI5YzcyZjMxMTI3MzkzOTgyYTcxZTM4MQ%3D%3D%3B869be21520bd7adae66efca9c3bc8a2b/jobkey-fea37281cfcdfb9b76b6185df247fc3471138/rid-rid_19849026424f67883fc308d5.78541130/pub_id-41106/cjp-5\">Boeing</src>\n
+        \ <ty>sponsored</ty>\n  <loc cty=\"Herndon\" st=\"VA\" postal=\"20195\" county=\"\"
+        region=\"\" country=\"US\">Herndon, VA</loc>\n  <ls>2012-03-16T01:23:44Z</ls>\n
+        \ <dp>2012-03-16T01:23:44Z</dp>\n  <e>with the customer. Expertise in writing
+        automated tests in Java is required. Spring expertise is required. CSS/HTML
+        ... (CI) Polygraph? Do you have experience programming with Java in a software
+        development environment? Do you have...</e>\n</r>\n<r>\n  <jt>Sr. Java Engineer
+        - Platform Job</jt>\n  <cn url=\"\">Successfactors</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTkgMTI6MjU6NTImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTQxMDMyJmNfaWQ9MTUyOTMmY3BjPTAuNDUmcG9zPTYmaGFzaD0xNjVlMDc0ODNkMTRkYWNhYTYxMDg2YmJhYzg0Yzg4Ng%3D%3D%3B75250338ecb6ec0db79948892d3e40cf/jobkey-18964.1656863A2/rid-rid_19849026424f67883fc308d5.78541130/pub_id-41106/cjp-6\">SuccessFactors</src>\n
+        \ <ty>sponsored</ty>\n  <loc cty=\"San Mateo\" st=\"CA\" postal=\"94404\"
+        county=\"\" region=\"\" country=\"US\">San Mateo, CA</loc>\n  <ls>2012-03-12T19:29:51Z</ls>\n
+        \ <dp>2012-03-12T19:29:51Z</dp>\n  <e>About SuccessFactors SuccessFactors
+        is the leading provider of cloud-based Business Execution Software and delivers
+        business alignment, team execution, people performance, and learning management
+        solutions to organizations of all sizes...</e>\n</r>\n<r>\n  <jt>Android/Java
+        developer with K-9 Mail experience</jt>\n  <cn url=\"\">Elance.com</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTkgMTI6MjU6NTImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTIyNTkzJmNfaWQ9MTMxOTAmY3BjPTAuMzAmcG9zPTcmaGFzaD0zOWJkYmRjODUwOThlNDI5NWU3ZjI5Mjg3MzgwNDk2MQ%3D%3D%3Bb1fccd43dfed8ac8acda69aee39499a4/jobkey-8060.29332701/rid-rid_19849026424f67883fc308d5.78541130/pub_id-41106/cjp-7\">Elance.com</src>\n
+        \ <ty>sponsored</ty>\n  <loc cty=\"New York\" st=\"NY\" postal=\"10075\" county=\"\"
+        region=\"\" country=\"US\">New York, NY</loc>\n  <ls>2012-03-18T19:21:59Z</ls>\n
+        \ <dp>2012-03-18T19:21:59Z</dp>\n  <e>We are looking for a Android / Java
+        developer that has experience working with the K-9 Mail open source application
+        ... considered. This job will be an hourly job requiring 10 or more hours
+        per week for 8 weeks. Desired Skills: Java,...</e>\n</r>\n<r>\n  <jt>Java/J2EE
+        Sys Architect-Lead Technical Specialist</jt>\n  <cn url=\"\">UPS</cn>\n  <src
+        url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTkgMTI6MjU6NTImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTI1MTcmY19pZD0xNTA0MCZjcGM9MC4yNSZwb3M9OCZoYXNoPWM2MGU0YmYyYTUzNjJjYjg1NTYyY2I2NDE0MTMwYzA1%3B117fca9069c915767576dbd460b3fbcb/jobkey-304d6da9a4a1d2cc7999779b4d37ea319bdb5bde/rid-rid_19849026424f67883fc308d5.78541130/pub_id-41106/cjp-8\">UPS</src>\n
+        \ <ty>sponsored</ty>\n  <loc cty=\"Alpharetta\" st=\"GA\" postal=\"30023\"
+        county=\"\" region=\"\" country=\"US\">Alpharetta, GA</loc>\n  <ls>2012-03-16T12:36:18Z</ls>\n
+        \ <dp>2012-03-16T12:36:18Z</dp>\n  <e>* Java/J2EE, BEA web logic ... HTML
+        - Expert Javascript - Expert Java Beans - Expert Java Servlets - Expert Web
+        Development Technologies - Expert Internet Development Architecture &amp;amp;
+        Design - Expert Object Oriented Analysis &amp;amp; Design -...</e>\n</r>\n<r>\n
+        \ <jt>Lead Java Developer / Architect</jt>\n  <cn url=\"\">Verizon Wireless</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTkgMTI6MjU6NTImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTg5NDcmY19pZD01NzA1JmNwYz0wLjEyJnBvcz05Jmhhc2g9N2E3MzRkNzA3ZGU3OWY4ZmZkMTMxNzRjNGQxZWVmMWI%3D%3Bc711c0e98af506a9d8f6da572caf9260/jobkey-82fb7f3ffa5920ba2010e039cb2620e68269f9bf/rid-rid_19849026424f67883fc308d5.78541130/pub_id-41106/cjp-9\">Verizon
+        Wireless</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Warren\" st=\"NJ\" postal=\"07059\"
+        county=\"\" region=\"\" country=\"US\">Warren, NJ</loc>\n  <ls>2012-03-16T09:03:21Z</ls>\n
+        \ <dp>2012-03-16T09:03:21Z</dp>\n  <e>Responsibilities The incumbent will
+        be leading other Java programmers to implement huge changes / new customer
+        facing se ... Qualifications 6+ years of experience in development using Java/J2EE
+        JSPs, Servlets with special emphasis on the followi...</e>\n</r>\n</rs>\n<pjl>\n</pjl>\n</shrs>\n"
+    http_version: 
+  recorded_at: Mon, 19 Mar 2012 19:25:52 GMT
+- request:
+    method: get
+    uri: http://api.simplyhired.com/a/jobs-api/xml-v2/q-java?cflg=r&clip=74.94.200.198&jbd=joblander.jobamatic.com&pshid=41106&ssty=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 19 Mar 2012 19:25:53 GMT
+      Content-Type:
+      - text/xml;charset=ISO-8859-1
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=20
+      Vary:
+      - Host
+      Set-Cookie:
+      - gc=1; expires=Tue, 20-Mar-2012 19:25:52 GMT; path=/
+      - shmk=deleted; expires=Sun, 20-Mar-2011 19:25:51 GMT; path=/
+      - shup=fvt%3D4f678840%26ncs%3D1%26lst%3D4f678840; expires=Wed, 18-Apr-2012 19:25:52
+        GMT; path=/
+      - shut=deleted; expires=Sun, 20-Mar-2011 19:25:51 GMT; path=/; domain=.simplyhired.com
+      Cache-Control:
+      - no-cache, must-revalidate
+      P3p:
+      - CP="CAO DSP COR CURa ADMa DEVa TAIa OUR BUS IND UNI COM NAV INT"
+      Content-Length:
+      - '9637'
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" standalone=\"no\" ?>\n<!DOCTYPE
+        shrs SYSTEM \"http://api.simplyhired.com/c/jobs-api/html/sr2.dtd\">\n\n<shrs>\n<rq
+        url=\"http://api.simplyhired.com/a/jobs-api/xml_v2/q-java\">\n  <t>Java Jobs</t>\n
+        \ <dt>2012-03-19T19:25:52Z</dt>\n  <si>0</si>\n  <rpd>10</rpd>\n  <tr>125999</tr>\n
+        \ <tv>812</tv>\n  <em url=\"\"/>\n<h>\n  <kw pos=\"1\"/>\n</h>\n</rq>\n<rs>\n<r>\n
+        \ <jt>Rockstar Senior / Sr. Java Back-End Developer</jt>\n  <cn url=\"\">Overactdev
+        Technology Partners</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTkgMTI6MjU6NTImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTIzMDQ3JmNfaWQ9MTA3NDcmY3BjPTEuNTEmcG9zPTEmaGFzaD03ZjE3ZjJmNzM4NGZiZTQzODU3OGQ1NmFmMGRkMTVhNQ%3D%3D%3B5bee2a9dfb1d4e9ef5ff89bcc51a6361/jobkey-6256.669135/rid-rid_19849026424f67883fc308d5.78541130/pub_id-41106/cjp-0\">OveractDev
+        Technology Partners</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Mountain View\"
+        st=\"CA\" postal=\"94043\" county=\"\" region=\"\" country=\"US\">Mountain
+        View, CA</loc>\n  <ls>2012-03-17T01:23:49Z</ls>\n  <dp>2012-03-17T01:23:49Z</dp>\n
+        \ <e>Silicon Valley. ----------------- keywords: Back end Core Java Spring
+        framework Struts Ajax Velocity Unix Linux Jboss ... VMWare Java 5 &amp; 6
+        JSTL Oracle ADF MyFaces XDoclet RMI Java Beans Ant Facelets AWT Swing PKI
+        security Cryptography...</e>\n</r>\n<r>\n  <jt>Java Developer / Software Engineer</jt>\n
+        \ <cn url=\"\">SRA International</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTkgMTI6MjU6NTImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTE0NjE1JmNfaWQ9MTEyMDcmY3BjPTEuNTAmcG9zPTImaGFzaD1lMWVhMDUzZDI0OWU2ZTQ5MTU3OTk1NWNlOTQzNDMyZA%3D%3D%3B35f149ebde25436575fb21b513fef4bb/jobkey-9032f6fd4a4691c86cd133d24c92d4086eb4cf5/rid-rid_19849026424f67883fc308d5.78541130/pub_id-41106/cjp-1\">SRA
+        International</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Arlington\" st=\"VA\"
+        postal=\"22223\" county=\"\" region=\"\" country=\"US\">Arlington, VA</loc>\n
+        \ <ls>2012-03-16T00:19:40Z</ls>\n  <dp>2012-03-16T00:19:40Z</dp>\n  <e>nUnit
+        libraries. Implement functional changes with the Java programming language
+        and support integration and acceptance testing. The individual will also support
+        changes through the creation of system documentation and UML diagrams. Struts...</e>\n</r>\n<r>\n
+        \ <jt>Java Application Developer</jt>\n  <cn url=\"\">Bright Now Dental</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/jobkey-32dfd1184929d9c3c2f6d9b4e78a34bf44f90/rid-rid_19849026424f67883fc308d5.78541130/cjp-2/hits-125999?aff_id=41106\">Bright
+        Now Dental</src>\n  <ty>organic</ty>\n  <loc cty=\"Irvine\" st=\"CA\" postal=\"92650\"
+        county=\"\" region=\"\" country=\"US\">Irvine, CA</loc>\n  <ls>2012-03-15T10:01:32Z</ls>\n
+        \ <dp>2012-03-15T10:01:32Z</dp>\n  <e>experience developing n-tier web applications
+        utilizing Java and J2EE methodologies Proficiency with J2EE ... EXTJS and
+        JQuery Experience with industry leading Java Frameworks such as Spring Framework,
+        Spring MVC and...</e>\n</r>\n<r>\n  <jt>Lead Java Developer</jt>\n  <cn url=\"\">TD
+        Ameritrade</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTkgMTI6MjU6NTImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTM5MDkwJmNfaWQ9MTQ3MzImY3BjPTEuMzMmcG9zPTMmaGFzaD04YWU5ZDYzMTA4NDBkOTI3NzFjZWJhYjg5NDNjNmEzZg%3D%3D%3Baee6aaf8e04f911f7c5d1d58f9797b99/jobkey-8792feaf942467822cca3db15a566033afb2267d/rid-rid_19849026424f67883fc308d5.78541130/pub_id-41106/cjp-3\">TD
+        Ameritrade</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Jersey City\" st=\"NJ\"
+        postal=\"07308\" county=\"\" region=\"\" country=\"US\">Jersey City, NJ</loc>\n
+        \ <ls>2012-03-13T11:58:40Z</ls>\n  <dp>2012-03-13T11:58:25Z</dp>\n  <e>* Strong
+        understanding and coding experience in Core-Java with JVM 1.5 or higher in
+        multi-threaded environment. * ... understanding of Relational Databases preferably
+        Oracle. * Java frame works using Struts, Spring etc. * ORM...</e>\n</r>\n<r>\n
+        \ <jt>Senior Java Developer/Architect</jt>\n  <cn url=\"\">Wizni</cn>\n  <src
+        url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTkgMTI6MjU6NTImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTIzMDQ3JmNfaWQ9MTA3NDYmY3BjPTEuMDAmcG9zPTQmaGFzaD1kNjJmNmI5YTc0M2YxY2Y1NzRmNGRmNDRmMGNkYTdhZQ%3D%3D%3Bdd90272ff4a98e9ea8914f40317bf0dd/jobkey-6256.668421/rid-rid_19849026424f67883fc308d5.78541130/pub_id-41106/cjp-4\">Wizni,
+        Inc.</src>\n  <ty>sponsored</ty>\n  <loc cty=\"San Ramon\" st=\"CA\" postal=\"94583\"
+        county=\"\" region=\"\" country=\"US\">San Ramon, CA</loc>\n  <ls>2012-03-15T20:13:43Z</ls>\n
+        \ <dp>2012-03-15T16:58:37Z</dp>\n  <e>- 5+ years experience with architecture
+        of enterprise Java/Java EE Applications - Application Server expertise: Oracle
+        ... - Enterprise Java frameworks expertise: Eclipse IDE, core Java, Spring
+        projects, Java Web Services, Java Security,...</e>\n</r>\n<r>\n  <jt>Java
+        Software Engineer 3 4</jt>\n  <cn url=\"\">Boeing</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTkgMTI6MjU6NTImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTI4MDIyJmNfaWQ9MTM2MDQmY3BjPTAuNTAmcG9zPTUmaGFzaD01YjEwYWJhMjRiYjA5NWMyMDNlYjRlYTFjY2ViOTJjYw%3D%3D%3B7e663b9502daf05c62d15c2ac06ca3af/jobkey-fea37281cfcdfb9b76b6185df247fc3471138/rid-rid_19849026424f67883fc308d5.78541130/pub_id-41106/cjp-5\">Boeing</src>\n
+        \ <ty>sponsored</ty>\n  <loc cty=\"Herndon\" st=\"VA\" postal=\"20195\" county=\"\"
+        region=\"\" country=\"US\">Herndon, VA</loc>\n  <ls>2012-03-16T01:23:44Z</ls>\n
+        \ <dp>2012-03-16T01:23:44Z</dp>\n  <e>with the customer. Expertise in writing
+        automated tests in Java is required. Spring expertise is required. CSS/HTML
+        ... (CI) Polygraph? Do you have experience programming with Java in a software
+        development environment? Do you have...</e>\n</r>\n<r>\n  <jt>Sr. Java Engineer
+        - Platform Job</jt>\n  <cn url=\"\">Successfactors</cn>\n  <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTkgMTI6MjU6NTImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTQxMDMyJmNfaWQ9MTUyOTMmY3BjPTAuNDUmcG9zPTYmaGFzaD0xZWYxZmIyMmMwNWVmYjQ1MGRjN2YyOGVlMDA5YWU5Ng%3D%3D%3B8327bfbdbb9ecaa7d0caee2a57dafeef/jobkey-18964.1656863A2/rid-rid_19849026424f67883fc308d5.78541130/pub_id-41106/cjp-6\">SuccessFactors</src>\n
+        \ <ty>sponsored</ty>\n  <loc cty=\"San Mateo\" st=\"CA\" postal=\"94404\"
+        county=\"\" region=\"\" country=\"US\">San Mateo, CA</loc>\n  <ls>2012-03-12T19:29:51Z</ls>\n
+        \ <dp>2012-03-12T19:29:51Z</dp>\n  <e>About SuccessFactors SuccessFactors
+        is the leading provider of cloud-based Business Execution Software and delivers
+        business alignment, team execution, people performance, and learning management
+        solutions to organizations of all sizes...</e>\n</r>\n<r>\n  <jt>Android/Java
+        developer with K-9 Mail experience</jt>\n  <cn url=\"\">Elance.com</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTkgMTI6MjU6NTImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTIyNTkzJmNfaWQ9MTMxOTAmY3BjPTAuMzAmcG9zPTcmaGFzaD1hZWQ5ODA3MzJmYzBjYjc3YzQxYzIzNWViODlhZWJmZA%3D%3D%3B88739303137cd6df9dd8e2a077baed30/jobkey-8060.29332701/rid-rid_19849026424f67883fc308d5.78541130/pub_id-41106/cjp-7\">Elance.com</src>\n
+        \ <ty>sponsored</ty>\n  <loc cty=\"New York\" st=\"NY\" postal=\"10075\" county=\"\"
+        region=\"\" country=\"US\">New York, NY</loc>\n  <ls>2012-03-18T19:21:59Z</ls>\n
+        \ <dp>2012-03-18T19:21:59Z</dp>\n  <e>We are looking for a Android / Java
+        developer that has experience working with the K-9 Mail open source application
+        ... considered. This job will be an hourly job requiring 10 or more hours
+        per week for 8 weeks. Desired Skills: Java,...</e>\n</r>\n<r>\n  <jt>Java/J2EE
+        Sys Architect-Lead Technical Specialist</jt>\n  <cn url=\"\">UPS</cn>\n  <src
+        url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTkgMTI6MjU6NTImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTI1MTcmY19pZD0xNTA0MCZjcGM9MC4yNSZwb3M9OCZoYXNoPWU0ZmNiNTYxN2Y3MGEyNGM5YzIyMWY3ODIzZDc4Yjdk%3B123b2ca2067c503b48e70abb412241f2/jobkey-304d6da9a4a1d2cc7999779b4d37ea319bdb5bde/rid-rid_19849026424f67883fc308d5.78541130/pub_id-41106/cjp-8\">UPS</src>\n
+        \ <ty>sponsored</ty>\n  <loc cty=\"Alpharetta\" st=\"GA\" postal=\"30023\"
+        county=\"\" region=\"\" country=\"US\">Alpharetta, GA</loc>\n  <ls>2012-03-16T12:36:18Z</ls>\n
+        \ <dp>2012-03-16T12:36:18Z</dp>\n  <e>* Java/J2EE, BEA web logic ... HTML
+        - Expert Javascript - Expert Java Beans - Expert Java Servlets - Expert Web
+        Development Technologies - Expert Internet Development Architecture &amp;amp;
+        Design - Expert Object Oriented Analysis &amp;amp; Design -...</e>\n</r>\n<r>\n
+        \ <jt>Lead Java Developer / Architect</jt>\n  <cn url=\"\">Verizon Wireless</cn>\n
+        \ <src url=\"http://api.simplyhired.com/a/job-details/view/cparm-cF9pZD00MTEwNiZ6b25lPTYmaXA9JmNvdW50PTUwJnN0YW1wPTIwMTItMDMtMTkgMTI6MjU6NTImcHVibGlzaGVyX2NoYW5uZWxfaWRzPSZhX2lkPTg5NDcmY19pZD01NzA1JmNwYz0wLjEyJnBvcz05Jmhhc2g9ZWVlNTZkM2JmNDgzMzk5OTJkZmFmMGMyNWJhMWJjODE%3D%3Bbeb6116b4d3f91942e00f09a30bc9839/jobkey-82fb7f3ffa5920ba2010e039cb2620e68269f9bf/rid-rid_19849026424f67883fc308d5.78541130/pub_id-41106/cjp-9\">Verizon
+        Wireless</src>\n  <ty>sponsored</ty>\n  <loc cty=\"Warren\" st=\"NJ\" postal=\"07059\"
+        county=\"\" region=\"\" country=\"US\">Warren, NJ</loc>\n  <ls>2012-03-16T09:03:21Z</ls>\n
+        \ <dp>2012-03-16T09:03:21Z</dp>\n  <e>Responsibilities The incumbent will
+        be leading other Java programmers to implement huge changes / new customer
+        facing se ... Qualifications 6+ years of experience in development using Java/J2EE
+        JSPs, Servlets with special emphasis on the followi...</e>\n</r>\n</rs>\n<pjl>\n</pjl>\n</shrs>\n"
+    http_version: 
+  recorded_at: Mon, 19 Mar 2012 19:25:53 GMT
+recorded_with: VCR 2.0.0
