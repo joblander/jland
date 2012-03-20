@@ -12,6 +12,8 @@
 #
 
 class User < ActiveRecord::Base
+  extend Forwardable
+
   has_many :positions
   has_one :job_search
   has_secure_password
@@ -22,10 +24,14 @@ class User < ActiveRecord::Base
 
   def fetch_positions(pstatus)
     if pstatus == 'to_review'
-      self.job_search.fetch.collect{|search_result| PositionFactory.build_from_search_results(search_result)}
+      do_job_search.collect{|search_result| PositionFactory.build_from_search_results(search_result)}
     else
       Array(self.positions.find_by_pstatus(pstatus))
     end
+  end
+
+  def do_job_search
+    self.job_search.fetch
   end
 
   private
