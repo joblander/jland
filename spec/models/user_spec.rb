@@ -28,6 +28,7 @@ describe User do
 	  	@position1 = FactoryGirl.create(:position, :name => 'p1', :pstatus => 'to_apply', :user => @user)
   	end
   	
+  	# need to move to job_search_spec
   	it "fetches to_review positions"  do
   		positions = [
         OpenStruct.new({ title: 'Post #1', pstatus: 'to_review' }),

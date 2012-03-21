@@ -22,6 +22,8 @@ class User < ActiveRecord::Base
 
   after_create :create_job_search
 
+  attr_writer :job_search_source
+
   def fetch_positions(pstatus)
     if pstatus == 'to_review'
       do_job_search.collect{|search_result| PositionFactory.build_from_search_results(search_result)}
@@ -36,7 +38,14 @@ class User < ActiveRecord::Base
 
   private
 
+  def job_search_source
+    @job_search_source ||= JobSearch.public_method(:new)
+  end
+
   def create_job_search
-    self.job_search = JobSearch.new
+    # change to self.job_search << job_search_source.call when we have has_many
+    self.job_search = job_search_source.call.tap do |js|
+      js.user = self
+    end
   end
 end
