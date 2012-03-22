@@ -1,25 +1,26 @@
 require 'spec_helper'
-require 'vcr'
-require 'vcr_helper'
 
 describe JobSearch do
-  it "should be able to return many jobs" do
-    VCR.use_cassette('ruby_job_search', :record => :new_episodes) do
-      search = FactoryGirl.create(:job_search, :search_term => 'ruby', :zipcode => '15217')
-      positions = search.fetch
-      positions.should_not be_empty
-    end
+
+  describe 'fetching positions' do
+  	before do
+	  	@job_search = FactoryGirl.create(:job_search, :search_term => 'java', :zipcode => 15217)
+	  	@position1 = FactoryGirl.create(:position, :name => 'p1', 
+        :pstatus => 'to_apply', :user => @job_search.user)
+  	end
+  	
+  	it "fetches to_review positions"  do
+  		positions = [
+        OpenStruct.new({ title: 'Post #1', pstatus: 'to_review' }),
+        OpenStruct.new({ title: 'Post #2', pstatus: 'to_review' }),
+        OpenStruct.new({ title: 'Post #3', pstatus: 'to_review' })
+      ]
+      SimplyHiredSearch.should_receive(:search).with('java',{:zipcode => '15217'})
+      	.and_return(positions)
+	  	
+  	  positions = @job_search.fetch
+      positions.size.should == 3
+      positions.each { |p|  p.pstatus.should == 'to_review'}
+		end
   end
 end
-# == Schema Information
-#
-# Table name: job_searches
-#
-#  id          :integer         not null, primary key
-#  user_id     :integer         not null
-#  search_term :string(255)
-#  zipcode     :integer
-#  created_at  :datetime        not null
-#  updated_at  :datetime        not null
-#
-
