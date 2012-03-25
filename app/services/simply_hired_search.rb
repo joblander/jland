@@ -1,14 +1,18 @@
+require 'open-uri'
+require 'nokogiri'
+require 'ostruct'
+require 'uri'
+
 class SimplyHiredSearch
-  require 'open-uri'
-  require 'nokogiri'
-  require 'ostruct'
-  require 'uri'
 
   API_URL_BASE = "http://api.simplyhired.com/a/jobs-api/xml-v2/".freeze
   API_LOCATION = "l-LOCATION".freeze
   API_QUERY = "q-SEARCH_TERM".freeze
   API_REST = "?pshid=41106&ssty=2&cflg=r&jbd=joblander.jobamatic.com&clip=74.94.200.198".freeze
 
+  # Search the simplu hired api for positions with the given term (mandatory) and options
+  # if options contains :zipcode then the zipcode value will be used for location
+  # Returns an array of 'positions' that respond to title, url, source, post_date etc.
   def self.search(term = '', options = {})
     raise ArgumentError unless term
     url = ''
@@ -17,7 +21,6 @@ class SimplyHiredSearch
     url << API_QUERY.sub('SEARCH_TERM', term) << API_REST
     doc = Nokogiri::XML(open(URI.escape(url)))
     positions = doc.xpath('//r').collect do |node|
-
       position = OpenStruct.new
       position.title = node.xpath("jt").text
       position.url = node.xpath("src/@url").text
