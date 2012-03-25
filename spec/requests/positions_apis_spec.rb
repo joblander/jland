@@ -17,7 +17,7 @@ describe "PositionsApis" do
 
   describe "GET /users/:user_id/positions.json" do
     it "gets all positions for a user when there's one position" do
-      position = Factory(:position, :name => 'pname', :source => 'http://bla')
+      position = FactoryGirl.create(:position, :name => 'pname', :source => 'http://bla')
       get "/users/#{position.user_id}/positions.json"
 
       res = ActiveSupport::JSON.decode(response.body)
@@ -29,14 +29,14 @@ describe "PositionsApis" do
     end
 
     it "gets all positions for a user when pstatus is specified" do
-      position = Factory(:position, :pstatus => 'to_apply')
+      position = FactoryGirl.create(:position, :pstatus => 'to_apply')
       get "/users/#{position.user_id}/positions.json", :pstatus => 'to_apply'
       res = ActiveSupport::JSON.decode(response.body)
       res.size.should == 1
     end
 
     it "gets no positions for a user when the positions don't have the requested pstatus" do
-      position = Factory(:position, :pstatus => 'interviewed')
+      position = FactoryGirl.create(:position, :pstatus => 'interviewed')
       get "/users/#{position.user_id}/positions.json", :pstatus => 'to_apply'
       res = ActiveSupport::JSON.decode(response.body)
       res.should be_empty
@@ -59,7 +59,7 @@ describe "PositionsApis" do
     end
 
     it "gets no positions for a user when there are no positions" do
-      user = Factory(:user)
+      user = FactoryGirl.create(:user)
       get "/users/#{user.id}/positions.json"
 
       res = ActiveSupport::JSON.decode(response.body).sort{|a,b| a.to_s <=> b.to_s}
