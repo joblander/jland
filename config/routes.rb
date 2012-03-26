@@ -4,7 +4,7 @@ Joblander::Application.routes.draw do
   get "signup" => "users#new", :as => "signup"
   root :to => "users#new"
   resources :users, :only => [:create, :edit] do
-    resources :job_search, :only => :update
+    resources :job_search, :only => [:update, :show]
     resources :positions, :except => [:new, :edit] do
       resources :related_emails, :only => [:create, :destroy]
     end

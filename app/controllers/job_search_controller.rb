@@ -11,4 +11,11 @@ class JobSearchController < ApplicationController
       format.json {render :json => @job_search}
     end
   end
+
+  def show
+  	job_search = JobSearch.find(params[:id])
+  	respond_to do |format|
+      format.json {render :json => job_search}
+    end
+  end
 end
