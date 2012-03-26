@@ -5,6 +5,10 @@ class JobSearchController < ApplicationController
     if @job_search.update_attributes(params[:job_search])
       flash[:notice] = "Successfully updated job search."
     end
-    redirect_to :back
+
+    respond_to do |format|
+      format.html {redirect_to :back}
+      format.json {render :json => @job_search}
+    end
   end
 end
