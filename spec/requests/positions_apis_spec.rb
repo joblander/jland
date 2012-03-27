@@ -75,7 +75,7 @@ describe "PositionsApis" do
     end
 
     it "gets many positions for a search term and a location" do
-      VCR.use_cassette('to_review_positions', :record => :new_episodes) do
+      VCR.use_cassette('to_review_positions') do
         user = FactoryGirl.create(:user)
         user.job_search.update_attributes(:search_term => 'ruby', :zipcode => '15217')
         get "/users/#{user.id}/positions.json", :pstatus => 'to_review'
