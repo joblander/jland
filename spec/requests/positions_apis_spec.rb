@@ -5,15 +5,13 @@ require 'vcr_helper'
 
 describe "PositionsApis" do
 
-  before do
-    @user = FactoryGirl.create(:user)
-    @user3 = FactoryGirl.create(:user)
-    @position1 = FactoryGirl.create(:position, :name => 'pname1', :source => 'http://bla1', :user => @user)
-    @position2 = FactoryGirl.create(:position, :name => 'pname2', :source => 'http://bla2', :user => @user)
-    @position3 = FactoryGirl.create(:position, :name => 'pname3', :source => 'http://bla2', :user => @user3)
-    @related1 = FactoryGirl.create(:related_email, :guid => 'guid1')
-    @related2 = FactoryGirl.create(:related_email, :guid => 'guid1')
-  end
+  let(:user)  { FactoryGirl.create(:user) }
+  let(:user3) { FactoryGirl.create(:user) }
+  let(:position1) { FactoryGirl.create(:position, :name => 'pname1', :source => 'http://bla1', :user => user) }
+  let(:position2) { FactoryGirl.create(:position, :name => 'pname2', :source => 'http://bla2', :user => user) }
+  let(:position3) { FactoryGirl.create(:position, :name => 'pname3', :source => 'http://bla2', :user => user3) }
+  let(:related1) { FactoryGirl.create(:related_email, :guid => 'guid1') }
+  let(:related2) { FactoryGirl.create(:related_email, :guid => 'guid1') }
 
   describe "GET /users/:user_id/positions.json" do
     it "gets all positions for a user when there's one position" do
@@ -44,16 +42,16 @@ describe "PositionsApis" do
 
     it "gets all positions for a user when there are two positions" do
 
-      @position1.user.id.should == @position2.user.id
-      get "/users/#{@user.id}/positions.json"
+      position1.user.id.should == position2.user.id
+      get "/users/#{user.id}/positions.json"
 
       res = ActiveSupport::JSON.decode(response.body).sort{|a,b| b['name'] <=> a['name']}
-      res[1]['name'].should == @position1.name
-      res[1]['source'].should == @position1.source
-      res[1]['user_id'].should == @position1.user.id
-      res[0]['name'].should == @position2.name
-      res[0]['source'].should == @position2.source
-      res[0]['user_id'].should == @position2.user.id
+      res[1]['name'].should == position1.name
+      res[1]['source'].should == position1.source
+      res[1]['user_id'].should == position1.user.id
+      res[0]['name'].should == position2.name
+      res[0]['source'].should == position2.source
+      res[0]['user_id'].should == position2.user.id
       res.size.should == 2
       response.status.should == 200
     end
@@ -91,16 +89,16 @@ describe "PositionsApis" do
   describe "POST /users/:user_id/positions.json" do
     # TODO test that we get the minimal set of required fields
     it "creates a position" do
-      post "/users/#{@user.id}/positions.json", :position => {:name => 'position_name'}
+      post "/users/#{user.id}/positions.json", :position => {:name => 'position_name'}
 
       res = ActiveSupport::JSON.decode(response.body)
       res['name'].should == 'position_name'
-      res['user_id'].should == @user.id
+      res['user_id'].should == user.id
       response.status.should == 201
     end
 
     it "does not create a position when a name is not specified" do
-      post "/users/#{@user.id}/positions.json"
+      post "/users/#{user.id}/positions.json"
 
       res = ActiveSupport::JSON.decode(response.body)
       response.status.should == 422
@@ -115,24 +113,24 @@ describe "PositionsApis" do
 
   describe "GET /users/:user_id/positions/:position_id.json" do
     it "gets a position for a user" do
-      get "/users/#{@user.id}/positions/#{@position1.id}.json"
+      get "/users/#{user.id}/positions/#{position1.id}.json"
 
       res = ActiveSupport::JSON.decode(response.body)
       res['name'].should == 'pname1'
-      res['user_id'].should == @user.id
+      res['user_id'].should == user.id
       response.status.should == 200
     end
 
     it "doesn't get a position for a non-existing position" do
       Position.exists?(888888).should be_false
-      get "/users/#{@user.id}/positions/888888.json"
+      get "/users/#{user.id}/positions/888888.json"
 
       response.status.should == 404
     end
 
     it "doesn't get a position for a position belonging to a different user" do
-      Position.exists?(@position3).should be_true
-      get "/users/#{@position3.id}/positions/#{@position3.id}.json"
+      Position.exists?(position3).should be_true
+      get "/users/#{position3.id}/positions/#{position3.id}.json"
 
       response.status.should == 404
     end
@@ -162,9 +160,9 @@ describe "PositionsApis" do
 
   describe "DELETE /users/:user_id/positions/:position_id.json" do
     it "deletes a position" do
-      Position.exists?(@position1.id).should be_true
-      delete "/users/#{@user.id}/positions/#{@position1.id}.json"
-      Position.exists?(@position1.id).should be_false
+      Position.exists?(position1.id).should be_true
+      delete "/users/#{user.id}/positions/#{position1.id}.json"
+      Position.exists?(position1.id).should be_false
 
       response.body.should be_empty
       response.status.should == 204
@@ -173,7 +171,7 @@ describe "PositionsApis" do
     it "should not care if instructed to delete a position for a non-existing position" do
       id = 88888
       Position.exists?(id).should be_false
-      delete "/users/#{@user.id}/positions/#{id}.json"
+      delete "/users/#{user.id}/positions/#{id}.json"
       response.status.should == 204
     end
 
@@ -188,29 +186,29 @@ describe "PositionsApis" do
 
   describe "PUT /users/:user_id/positions/:position_id.json" do
     it "updates a position when given :position => {:name => 'new_name'}" do
-      put "/users/#{@user.id}/positions/#{@position1.id}.json", :position => {:name => 'new_name'}
+      put "/users/#{user.id}/positions/#{position1.id}.json", :position => {:name => 'new_name'}
 
-      'pname1'.should == @position1.name
-      @position1.reload
-      @position1.name.should == 'new_name'
+      'pname1'.should == position1.name
+      position1.reload
+      position1.name.should == 'new_name'
       response.status.should == 204
     end
 
     it "updates a position's status when given ':position => {:status => 'applied'}'" do
-      put "/users/#{@user.id}/positions/#{@position1.id}.json", :position => {:pstatus => 'applied'}
+      put "/users/#{user.id}/positions/#{position1.id}.json", :position => {:pstatus => 'applied'}
 
-      'to_apply'.should == @position1.pstatus
-      @position1.reload
-      @position1.pstatus.should == 'applied'
+      'to_apply'.should == position1.pstatus
+      position1.reload
+      position1.pstatus.should == 'applied'
       response.status.should == 204
     end
 
     it "starrs a position when given ':position => {:starred => 'true'}'" do
-      put "/users/#{@user.id}/positions/#{@position1.id}.json", :position => {:starred => 'true'}
+      put "/users/#{user.id}/positions/#{position1.id}.json", :position => {:starred => 'true'}
 
-      @position1.starred.should be_false
-      @position1.reload
-      @position1.starred.should be_true
+      position1.starred.should be_false
+      position1.reload
+      position1.starred.should be_true
       response.status.should == 204
     end
   end
@@ -218,38 +216,38 @@ describe "PositionsApis" do
   describe "POST /users/:user_id/positions/:position_id/related_emails" do
     # TODO test that we get the minimal set of required fields
     it "creates a related_email" do
-      post "/users/#{@position1.user.id}/positions/#{@position1.id}/related_emails.json", :related_email => {:guid => '1234er'}
+      post "/users/#{position1.user.id}/positions/#{position1.id}/related_emails.json", :related_email => {:guid => '1234er'}
 
       res = ActiveSupport::JSON.decode(response.body)
       res['guid'].should == '1234er'
-      res['position_id'].should == @position1.id
+      res['position_id'].should == position1.id
       response.status.should == 201
     end
 
     it "does not create a related email when a guid is not specified" do
-      post "/users/#{@position1.user.id}/positions/#{@position1.id}/related_emails.json"
+      post "/users/#{position1.user.id}/positions/#{position1.id}/related_emails.json"
 
       res = ActiveSupport::JSON.decode(response.body)
       response.status.should == 422
     end
 
     it "does not create a relaed email when the user doesn't exist" do
-      post "/users/88888888/positions/#{@position1.id}/related_emails.json", :related_email => {:guid => '1234er'}
+      post "/users/88888888/positions/#{position1.id}/related_emails.json", :related_email => {:guid => '1234er'}
 
       response.status.should == 404
     end
 
     it "does not create a relaed email when the position doesn't exist" do
-      post "/users/#{@user3.id}/positions/88888888/related_emails.json", :related_email => {:guid => '1234er'}
+      post "/users/#{user3.id}/positions/88888888/related_emails.json", :related_email => {:guid => '1234er'}
 
       response.status.should == 404
     end
 
     describe "DELETE /users/:user_id/positions/:position_id/related_emails/:related_email.json" do
       it "deletes a related email" do
-        RelatedEmail.exists?(@related1.id).should be_true
-        delete "/users/#{@related1.position.user.id}/positions/#{@related1.position.id}/related_emails/#{@related1.id}.json"
-        Position.exists?(@related1.id).should be_false
+        RelatedEmail.exists?(related1.id).should be_true
+        delete "/users/#{related1.position.user.id}/positions/#{related1.position.id}/related_emails/#{related1.id}.json"
+        Position.exists?(related1.id).should be_false
 
         response.body.should be_empty
         response.status.should == 204
@@ -258,7 +256,7 @@ describe "PositionsApis" do
       it "should not care if instructed to delete a position for a non-existing position" do
         id = 88888
         RelatedEmail.exists?(id).should be_false
-        delete "/users/#{@related1.position.user.id}/positions/#{@related1.position.id}/related_emails/#{id}.json"
+        delete "/users/#{related1.position.user.id}/positions/#{related1.position.id}/related_emails/#{id}.json"
         response.status.should == 204
       end
 
